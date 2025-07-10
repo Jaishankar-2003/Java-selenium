@@ -72,9 +72,18 @@ public class driver_navigation {
 
         Thread.sleep(2000);
 
-        driver.navigate().back();
+        driver.navigate().back();            //driver.navigate.back
         System.out.println("button url : "+driver.getCurrentUrl());
 
+        Thread.sleep(2000);
+
+        driver.navigate().refresh();
+        driver.navigate().to("https://letcode.in/");
+
+        driver.get("https://google.com");
+        driver.navigate().to("https://letcode.in/");
+        driver.navigate().back();
+        driver.navigate().forward();
 
         Thread.sleep(2000);
         driver.quit();

@@ -1,0 +1,16 @@
+🔁 driver.navigate().to("https://letcode.in/");
+Belongs to: navigate() interface of WebDriver.
+Use Case: Think of this like a browser navigation button (like hitting a link or entering a URL).
+✅ Supports forward(), back(), and refresh() operations too.
+Good for: Simulating realistic browsing behavior, like going back and forth between pages.
+
+🚀 driver.get("https://letcode.in/edit/");
+Belongs to: Core WebDriver interface.
+Use Case: It loads a new page, waits until the page is fully loaded before going further.
+✅ It’s simpler and straight-up meant for just landing on a URL.
+Good for: Most test cases where you need to load a test page directly and move on.
+
+driver.get("https://google.com");
+driver.navigate().to("https://letcode.in/");
+driver.navigate().back();
+driver.navigate().forward();
