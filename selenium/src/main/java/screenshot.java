@@ -33,7 +33,7 @@ public class screenshot {
 
         //SCREENSHOT OF THE ENTIRE SECTION
 
-        WebElement sec = driver.findElement(By.className("has-text-centered"));
+        WebElement sec = driver.findElement(By.className("content"));
         File srccc = sec.getScreenshotAs(OutputType.FILE);
         File desttt = new File("/home/sri-jaya-shankaran/IdeaProjects/java-selenium/selenium/src/main/snaps/image3.png");
         // Copy the screenshot to destination
