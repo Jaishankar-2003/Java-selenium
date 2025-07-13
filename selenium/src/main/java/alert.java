@@ -32,18 +32,13 @@ public class alert {
 
         //prompt alert
         driver.findElement(By.id("prompt")).click();
+        //System.out.println(driver.getCurrentUrl());       unhandle exception  , no alert exception
         driver.switchTo().alert();
         alert.sendKeys("selenium training shankar");
         System.out.println(alert.getText());
         alert.accept();
         String name = driver.findElement(By.id("myName")).getText();
         System.out.println(name);
-
-
-
-
-
-
 
 
 
