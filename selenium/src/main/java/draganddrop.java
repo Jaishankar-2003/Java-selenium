@@ -33,7 +33,25 @@ public class draganddrop {
         System.out.println(action.getActionDuration());
 
 
+        driver.get("https://jqueryui.com/draggable/");
+        driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));   //1 time declaration
+        driver.switchTo().frame(0);
+        WebElement sourcee = driver.findElement(By.id("draggable"));
+        //WebElement targett = driver.findElement(By.id("droppable"));
+
         Thread.sleep(1000);
+        Actions actionn = new Actions(driver);
+        actionn.dragAndDropBy(sourcee,30,40).perform();
+
+
+
+        //actionn.dragAndDrop(source,target).perform();
+        //System.out.println(action.getActionDuration());
+
+
+
+        // Thread.sleep(1000);
 
 
 
