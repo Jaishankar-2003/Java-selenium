@@ -6,7 +6,7 @@ public class alert {
     public static void main (String[] arg) throws InterruptedException {
 
         // To open the chrome using simple driver
-
+        //test
         //System.setProperty("webdriver.chrome.driver" , " location of the driver ")
         ChromeDriver driver = new ChromeDriver();
         //FirefoxDriver driver =
