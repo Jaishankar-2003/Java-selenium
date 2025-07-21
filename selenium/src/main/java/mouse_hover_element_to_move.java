@@ -23,8 +23,8 @@ public class mouse_hover_element_to_move {
         // load the url
         driver.get("https://www.flipkart.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/header/div[2]/div[2]/div/div/div/div/a")).click();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/header/div[2]/div[2]/div/div/div/div/a")).click();
         WebElement ele = driver.findElement(By.xpath("//span[.='Electronics']"));
         Actions realme  = new Actions(driver);
         realme.moveToElement(ele).perform();
