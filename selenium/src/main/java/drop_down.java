@@ -28,7 +28,7 @@ public class drop_down {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-       //to scroll the pasge to perform operatiion
+       //to scroll the page to perform operation
       /*WebElement element = driver.findElement(By.id("dropdown")); // use any locator
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -51,23 +51,48 @@ public class drop_down {
         System.out.println(myCountry.getFirstSelectedOption().getText());
         */
 
+        Select apple = new Select(driver.findElement(By.id("fruits")));
+        System.out.println("Is multiple select? " + apple.isMultiple());
+
+        apple.selectByValue("0");
+        apple.selectByValue("1");
+        apple.selectByValue("2");
+        apple.selectByValue("3");
+
+
+        List<WebElement> fruitt = apple.getOptions();  //syntax list of HTML elements that were selected from the dropdown.
+        fruitt.forEach(i -> System.out.println(i.getText()));
+
+
+        System.out.println(apple.getFirstSelectedOption().getText());
+
+
+
+
+
         Select heros = new Select(driver.findElement(By.id("superheros")));
         boolean multi  = heros.isMultiple();
         System.out.println("is multi: " + heros.isMultiple());
 
         Select fruit = new Select(driver.findElement(By.id("fruits")));
         fruit.selectByVisibleText("Apple");
-        System.out.println(fruit.);
+        System.out.println(fruit);
 
 
 
         heros.selectByValue("am");//it return any thing just select the option
         heros.selectByIndex(2);
+        heros.selectByIndex(3);
+        heros.selectByIndex(4);
         System.out.println("Selected: " + heros.getFirstSelectedOption().getText());
 
-       List<WebElement> selectedOptions = heros.getAllSelectedOptions();  //syntax list of HTML elements that were selected from the dropdown.
+        //DESELECT THE ELEMENT is only possible by multi drop down
+        heros.deselectByIndex(3);
+
+
+       List<WebElement> SelectedOptions = heros.getAllSelectedOptions();  //syntax list of HTML elements that were selected from the dropdown.
         System.out.println(" All selected options:");
-        for (WebElement option : selectedOptions) {      // loop function for the given system
+        for (WebElement option : SelectedOptions) {      // loop function for the given system
             System.out.println("- " + option.getText());
         }
 

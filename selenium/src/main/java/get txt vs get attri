@@ -1,0 +1,38 @@
+
+get txt
+| Feature         | Description                                                     |
+| --------------- | --------------------------------------------------------------- |
+| 📌 Purpose      | Gets **visible text** of the element (user-facing)              |
+| 👀 What it sees | Text between HTML tags that's **actually rendered on screen**   |
+| ❌ Cannot fetch  | Hidden text (e.g., `display: none`), input values, placeholders |
+| ✅ Best for      | Verifying labels, headings, messages, buttons, spans, etc.      |
+| 📘 Example      | `element.getText()`<br>From: `<h1>Welcome</h1>` → `Welcome`     |
+
+
+get attri
+| Feature      | Description                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| 📌 Purpose   | Gets the **value of any HTML attribute** (visible or hidden)             |
+| 🔍 Can fetch | `value`, `href`, `type`, `placeholder`, `class`, `data-*`, etc.          |
+| 🧠 Works on  | `<input>`, `<a>`, `<div>`, custom elements                               |
+| ✅ Best for   | Input values, link targets, button types, hidden data                    |
+| 📘 Example   | `element.getAttribute("value")`<br>From: `<input value="baby">` → `baby` |
+
+
+compar
+
+| Feature                     | `getText()`  | `getAttribute()`        |
+| --------------------------- | ------------ | ----------------------- |
+| Gets visible text?          | ✅            | ❌                       |
+| Gets hidden data?           | ❌            | ✅                       |
+| Works on `<input>`?         | ❌            | ✅                       |
+| Gets `href`, `value`, etc.? | ❌            | ✅                       |
+| Useful for UI validation?   | ✅            | ✅                       |
+| Format                      | No parameter | Requires attribute name |
+
+
+common mistake
+
+WebElement input = driver.findElement(By.id("name"));
+System.out.println(input.getText());  // ❌ Empty
+System.out.println(input.getAttribute("value"));  // ✅ Shows input value
