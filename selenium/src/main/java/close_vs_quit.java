@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class get_txt_get_attribute {
+public class close_vs_quit {
 
     public static void main(String[] arg) throws InterruptedException {
 
@@ -90,7 +90,7 @@ public class get_txt_get_attribute {
 
 
 
-        driver.quit();
+        driver.close();  // if i use close it will close but not goes from memory  (it will run on task manage)
     }
 
 
