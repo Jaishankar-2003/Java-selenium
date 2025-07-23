@@ -84,13 +84,9 @@ public class close_vs_quit {
 
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+        //driver.close();  // if i use close it will close but not goes from memory  (it will run on task manage)
 
-
-
-
-
-
-        driver.close();  // if i use close it will close but not goes from memory  (it will run on task manage)
+        driver.quit();
     }
 
 
