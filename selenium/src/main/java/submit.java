@@ -34,6 +34,8 @@ public class submit {
         driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
         driver.findElement(By.xpath("//*[@id=\"login\"]/button")).submit();
 
+        // submit is work on only form page formate (if the login page design in form format  that place only  SUBMIT should be used )
+
 
 
 
