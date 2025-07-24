@@ -36,7 +36,7 @@ public class drop_down {
 
         driver.findElement(By.id("dropdown"));
         WebElement drop = driver.findElement(By.cssSelector("#dropdown"));
-        Select dropdown = new Select(drop);
+        Select dropdown = new Select(drop);                 // USE SELECT FOR THE DROP DOWN
         dropdown.selectByVisibleText("Option 1");
         dropdown.selectByVisibleText("Option 2");
 

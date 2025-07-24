@@ -1,0 +1,100 @@
+Here’s a clean **one-page note** on `isEnabled()`, `isDisplayed()`, and `isSelected()` in Selenium – with **where to use them and examples**:
+
+---
+
+# **Selenium: isEnabled(), isDisplayed(), isSelected()**
+
+---
+
+## **1. `isEnabled()`**
+
+**What it does:**
+
+* Checks if a **web element** (like button, input box, checkbox) is **enabled** (interactable) or **disabled**.
+* Returns `true` if enabled, `false` otherwise.
+
+**Use Case:**
+
+* When you need to verify that a button or form field is active before performing an action.
+
+**Example:**
+
+```java
+WebElement loginBtn = driver.findElement(By.id("login"));
+if (loginBtn.isEnabled()) {
+    loginBtn.click();
+} else {
+    System.out.println("Login button is disabled");
+}
+```
+
+---
+
+## **2. `isDisplayed()`**
+
+**What it does:**
+
+* Checks if an element is **visible on the web page (UI)**.
+* Returns `true` if visible, `false` if hidden (e.g., `display:none;` or `visibility:hidden`).
+
+**Use Case:**
+
+* When you need to verify that a banner, text, or button is actually visible to the user before interacting.
+
+**Example:**
+
+```java
+WebElement banner = driver.findElement(By.id("promo"));
+if (banner.isDisplayed()) {
+    System.out.println("Promo banner is visible");
+}
+```
+
+---
+
+## **3. `isSelected()`**
+
+**What it does:**
+
+* Checks if a **radio button, checkbox, or dropdown option** is **selected**.
+* Returns `true` if selected, `false` otherwise.
+
+**Use Case:**
+
+* When you need to verify that a checkbox is ticked or a radio button is selected.
+
+**Example:**
+
+```java
+WebElement rememberMe = driver.findElement(By.id("remember"));
+if (!rememberMe.isSelected()) {
+    rememberMe.click();
+}
+```
+
+---
+
+## **Quick Comparison Table**
+
+| Method            | Checks?           | Returns?     | Use For                         |
+| ----------------- | ----------------- | ------------ | ------------------------------- |
+| **isEnabled()**   | Enabled/disabled  | `true/false` | Buttons, input fields           |
+| **isDisplayed()** | Visible on screen | `true/false` | Texts, banners, any UI elements |
+| **isSelected()**  | Checked/selected  | `true/false` | Checkboxes, radio buttons       |
+
+---
+
+### **Pro Tip:**
+
+* Always combine these checks with `findElement` to avoid `NoSuchElementException`.
+* Example combo:
+
+```java
+if (element.isDisplayed() && element.isEnabled()) {
+    element.click();
+}
+```
+
+---
+
+Would you like me to **make a printable PDF note (1-page, clean format)** with this content so you can just keep it in your QA study folder?
