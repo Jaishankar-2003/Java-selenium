@@ -21,7 +21,7 @@ public class find_elements {
         driver.manage().window().maximize();
 
         // if we use the FIND ELEMENT "mandatory we want to use the implicite wait in the code structure"
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
         driver.get("https://letcode.in/edit");
 
@@ -35,6 +35,9 @@ public class find_elements {
             System.out.println(text);
         }
 
+        System.out.println(labels.size());
+        WebElement lastele = labels.get(labels.size()-1);
+        System.out.println("The last element is : " + lastele.getText());
 
         driver.quit();
     }
