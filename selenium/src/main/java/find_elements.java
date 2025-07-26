@@ -28,7 +28,7 @@ public class find_elements {
 
         //find elements is used for find the multiple elements in the web page
 
-        List<WebElement> labels = driver.findElements(By.tagName("label"));
+        List<WebElement> labels = driver.findElements(By.tagName("label"));    // label is an common container  includes all element
         for (WebElement label : labels)
         {
             String text  = label.getText();
