@@ -35,6 +35,17 @@ public class find_elements {
             System.out.println(text);
         }
 
+        int size = labels.size();
+        if (size == 6)
+        {
+            System.out.println("=====Test case is passed=======");
+        }
+        else
+        {
+            System.out.println("Test case is failed");
+        }
+
+
         System.out.println(labels.size());
         WebElement lastele = labels.get(labels.size()-1);
         System.out.println("The last element is : " + lastele.getText());
