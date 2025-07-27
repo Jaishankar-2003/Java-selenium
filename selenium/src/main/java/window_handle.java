@@ -40,12 +40,30 @@ public class window_handle
         {
           driver.switchTo().window(winhandles.get(1));
           driver.manage().window().maximize();
-          System.out.println("handles" + driver.getCurrentUrl());
+          System.out.println("handles: " + driver.getCurrentUrl());
         }
         else
         {
             System.out.println("no new windows should be found");
         }
+
+        driver.switchTo().window(winhandles.get(0));
+        driver.close();
+
+        Set <String> winhandles2 =  driver.getWindowHandles();
+        winhandles.clear();
+        winhandles.addAll(winhandles2);
+        driver.switchTo().window(winhandles.get(0));
+
+
+
+        System.out.println("final url " + driver.getCurrentUrl());
+
+
+
+
+
+
 
 
         //driver.switchTo().window(list.get(1));
@@ -58,7 +76,7 @@ public class window_handle
 
 
 
-        driver.quit();
+        //driver.quit();
 
     }
 
