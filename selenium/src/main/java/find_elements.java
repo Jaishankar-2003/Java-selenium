@@ -1,6 +1,9 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import javax.swing.*;
 import java.time.Duration;
 import java.util.List;
 
@@ -22,6 +25,8 @@ public class find_elements {
 
         // if we use the FIND ELEMENT "mandatory we want to use the implicite wait in the code structure"
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+        /*
 
         driver.get("https://letcode.in/edit");
 
@@ -49,6 +54,15 @@ public class find_elements {
         System.out.println(labels.size());
         WebElement lastele = labels.get(labels.size()-1);
         System.out.println("The last element is : " + lastele.getText());
+
+        */
+
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.get("https://google.com");
+        driver.findElement(By.xpath("//*[@id=\"APjFqb\"]")).sendKeys("cricket", Keys.ENTER);
+        List<WebElement> crickets = driver.findElements(By.xpath("//*[contains(text(),'cricket') or contains(text(),'Cricket') ]"));
+        System.out.println(crickets.size());
 
         driver.quit();
     }
