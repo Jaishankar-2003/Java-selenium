@@ -1,0 +1,33 @@
+DAY 1
+------------
+LOCATORS
+------------
+id
+name
+link text - partial link text
+class name
+tag name
+
+
+
+
+------------
+CUSTOMIZED LOCATORS
+______________
+
+CSS SELECTOR
+--------------
+tag id
+tag class
+tag attribute
+tag class and attribute
+
+XPATH
+---------
+Absolute xpath
+Relative xpath
+
+
+
+
+
