@@ -14,19 +14,20 @@ public class SDET_1_locator
     {
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://demo.opencart.com/");
+        driver.get("https://testautomationpractice.blogspot.com/");
 
         driver.manage().window().maximize();
 
+
+       WebElement txt = driver.findElement(By.id("Wikipedia1_wikipedia-search-input"));
+       //System.out.println(txt.getText());
+
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        WebElement check  = driver.findElement(By.xpath("//*[@id=\"RInW4\"]/div/label/input"));
-        check.click();
+       driver.findElement(By.className("wikipedia-search-button")).click();
 
 
-        driver.findElement(By.name("search")).sendKeys("new day today");
-
-        driver.findElement(By.xpath("//*[@id=\"search\"]/button")).click();
 
         driver.quit();
     }
