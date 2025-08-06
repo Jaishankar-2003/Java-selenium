@@ -17,11 +17,6 @@ tag class attribute -   tag.classname[attribute = "value"]    locate ( single el
 
 */
 
-
-
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;    // web driver is an interface
 import org.openqa.selenium.WebElement;

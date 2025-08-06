@@ -29,5 +29,18 @@ Relative xpath
 
 
 
+CSS SELECTOR
+
+tag id    -     tag#id    tag of element , id of element ( # )
+
+tag class    --    tag.classname ( . )          locate group of element  as well single element
+
+tag attribute   -    tag[attribute="value"]
+
+tag class attribute -   tag.classname[attribute = "value"]    locate ( single element specific element )
+
+
+
+
 
 
