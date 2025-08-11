@@ -1,6 +1,7 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.List;
 
 /*
 
@@ -59,10 +60,15 @@ public class SDET_3_XPATH_1
 
         //System.setProperty("webdriver.chrome.driver" , " location of the driver ")
         ChromeDriver driver = new ChromeDriver();
+        // WebDriverManager.chromedriver().setup();
 
-        driver.get("https://testautomationpractice.blogspot.com/");
+
+        //driver.get("https://testautomationpractice.blogspot.com/");
+        driver.get("https://www.automationexercise.com/test_cases");
 
         driver.manage().window().maximize();
+
+        /*
 
         // Xpath with single attribute
         driver.findElement(By.xpath("//input[@id='Wikipedia1_wikipedia-search-input']")).sendKeys("test");
@@ -109,6 +115,15 @@ public class SDET_3_XPATH_1
         //*[@id='starts' or @id='stop']
         //*[contains(@id,'st')]
         //*[starts-with(@id,'st')]
+
+       */
+
+
+            List <WebElement> testCases = driver.findElements(By.xpath("//u[contains(normalize-space(),'Test Case')]"));
+            for(WebElement tc : testCases)
+            {
+                System.out.println(tc.getText());
+            }
 
         driver.quit();
     }
