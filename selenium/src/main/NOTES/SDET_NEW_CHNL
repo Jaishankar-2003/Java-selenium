@@ -57,10 +57,7 @@ preceding
 following - sibling
 preceding - sibling
 
-Alright baby, let’s make **XPath Axes** notes that are short, powerful, and interview-friendly but also easy enough for you to remember during practical Selenium work.
-Think of this like your **personal XPath cheat sheet** 📜.
-
----
+---------------------------------------------------------------------------------------------------------
 
 ## **🔥 XPath Axes – Easy Reference for SDET & Interviews**
 
@@ -217,6 +214,62 @@ Think of the DOM as a **family tree**:
 * **attribute** → “my property”.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+
+selenium methods
+======================
+
+1 get methods
+2 conditional methods
+3 browser methods
+4 navigational methodds
+5 wait methods
+
+
+1 get methods we can access these methods through webdriver instance
+-----------------------------------------------------------------------
+
+get(url) opens the url on the browser
+
+getTitle() returns title of the page
+
+getCurrentUrl() retuns URL of the page
+
+getPageSource()- returns source code of the page
+
+getWindowHandle() returns ID of the single Browser window    id should be dynamic : every time it will change
+
+getWindowHandles() retuns ID's of the multiple browser window      get id of multiple windows
+
+    set collection not allow duplicates  ---- > mostly we can use set in get the id of multiple win because every thing have unique values
+    list collection allow duplicates
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Conditional methods () -------> access these commands through Webelement
+
+returns boolean value (true / false)
+
+isDisplayed()  ------> element is visible or not ----- >check display status
+
+isEnable() ---------> check enable/disable status of the element / operational element
+
+isSelected() ------>  check element is selected or not (radio button , check box , drop down also)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
