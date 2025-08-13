@@ -26,6 +26,9 @@ public class SDET_method2
         //get(url)
         driver.get("https://www.tutorialspoint.com/selenium/practice/check-box.php");
 
+        boolean select = driver.findElement(By.xpath("//input[@id='c_bs_1']")).isSelected();
+        System.out.println("box is selected : " + select);
+
 
 
 

@@ -67,8 +67,10 @@ driver.get("https://example.com");
 String mainWindow = driver.getWindowHandle();
 Set<String> allWindows = driver.getWindowHandles();
 
-for (String window : allWindows) {
-    if (!window.equals(mainWindow)) {
+for (String window : allWindows)
+{
+    if (!window.equals(mainWindow))
+    {
         driver.switchTo().window(window);
         driver.close();  // Closes only the new tab
     }

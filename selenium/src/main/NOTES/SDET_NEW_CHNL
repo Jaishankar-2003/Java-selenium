@@ -255,6 +255,54 @@ isEnable() ---------> check enable/disable status of the element / operational e
 
 isSelected() ------>  check element is selected or not (radio button , check box , drop down also)
 
+--------------------------------------------------------------------------------------------------------------------------
+
+browser method
+-------------------
+
+close()  = close single browser  ( parent win first close )
+quit() = close multiple browser
+
+----------------------------------------------------------------------------------------------------------------------
+
+wait commands
+----------------
+
+synchronize  problem  ---
+
+thread.sleep()
+1 implicit wait
+2  explicit wait / fluent wait
+
+noSuchElementException -- Element is not present on the page.Synchronization.
+ElementNotFoundException  -- Locator is in correct
+
+sleep() --- java based
+----------
+
+Adv - easy to use
+
+dis - IF TIME IS NOT SUFFICIENT THEN YOU WILL GET EXCEPTION ,
+       it will wait for max time out this will reduce performance script
+       multiple
+
+implicitwait()
+-------------------
+driver.manage().timeout().implicitWait()timeDuration.of.Seconds(10));
+
+ADV: single time , IT WILL NOT WAIT TILL MAX TIME IF THE ELEMENT IS AVAILABLE , applicable for all element ,
+
+DIS : IF TIME IS NOT SUFFICIENT THEN YOU WILL GET EXCEPTION
+
+ExplicitWait()
+-------------------
+
+ Declaration = WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(4));   //declaration
+
+ Use =     WebElement usertxt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Username']"))); // use the declaration
+
+           usertxt.sendKeys("Admin");
+
 
 
 

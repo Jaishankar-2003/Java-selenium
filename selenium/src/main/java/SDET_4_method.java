@@ -51,6 +51,19 @@ public class SDET_4_method
         System.out.println("search is enable :  " + search.isEnabled());
 
 
+        driver.get("https://www.tutorialspoint.com/selenium/practice/radio-button.php");
+
+        WebElement yes =  driver.findElement(By.xpath("//input[@value='igottwo']"));
+        System.out.println("yes select or nor : "  +yes.isSelected());
+
+        WebElement imp =  driver.findElement(By.xpath("//input[@value='igotthree']"));
+        System.out.println("imp select or nor : "  +imp.isSelected());
+
+        yes.click();
+
+        WebElement Ayes =  driver.findElement(By.xpath("//input[@value='igottwo']"));
+        System.out.println("After click yes select or nor : "  +Ayes.isSelected());
+
 
         Set<String> solu = driver.getWindowHandles();
         System.out.println("All Window IDs: " + solu);
