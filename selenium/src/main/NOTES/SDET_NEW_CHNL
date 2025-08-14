@@ -430,8 +430,13 @@ Here’s the **official breakdown** (based on Selenium 4.x API) — these are al
 =============================================================================================================================
 
 
+declaration
+use
 
-
+1 conditional based it will work more efficient
+2 finding element is inclusive(for some condition)
+3 it will wait for condition to be true , then consider the time
+4 we need to write multiple statement for multiple element
 
 
 
