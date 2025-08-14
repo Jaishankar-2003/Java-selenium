@@ -304,6 +304,134 @@ ExplicitWait()
            usertxt.sendKeys("Admin");
 
 
+==================================================================================================================
+
+Gotcha — you basically want the **full list of `ExpectedConditions` in Selenium**, not just the common ones.
+
+Here’s the **official breakdown** (based on Selenium 4.x API) — these are all the static helper methods from `org.openqa.selenium.support.ui.ExpectedConditions` you can use with `WebDriverWait`.
+
+---
+
+## **📜 Full ExpectedConditions List in Selenium**
+
+(With short descriptions so you know when to use each)
+
+---
+
+### **Element Presence & Visibility**
+
+| Method                                                               | What It Does                                                       |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `presenceOfElementLocated(By locator)`                               | Waits until the element is in the DOM (visibility not guaranteed). |
+| `presenceOfAllElementsLocatedBy(By locator)`                         | Waits until *all* elements matching locator are in the DOM.        |
+| `visibilityOf(WebElement element)`                                   | Waits until the given element is visible.                          |
+| `visibilityOfElementLocated(By locator)`                             | Waits until the element located by locator is visible.             |
+| `visibilityOfAllElements(List<WebElement> elements)`                 | Waits until all given elements are visible.                        |
+| `visibilityOfAllElementsLocatedBy(By locator)`                       | Waits until all located elements are visible.                      |
+| `visibilityOfAllElementsLocatedBy(By locator, String text)` *(Rare)* | Same as above but matching text.                                   |
+
+---
+
+### **Clickability**
+
+| Method                                     | What It Does                                                  |
+| ------------------------------------------ | ------------------------------------------------------------- |
+| `elementToBeClickable(WebElement element)` | Waits until element is visible & enabled so you can click it. |
+| `elementToBeClickable(By locator)`         | Same as above but locator-based.                              |
+
+---
+
+### **Invisibility & Staleness**
+
+| Method                                                 | What It Does                                              |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| `invisibilityOf(WebElement element)`                   | Waits until given element is not visible (or not in DOM). |
+| `invisibilityOfElementLocated(By locator)`             | Waits until located element is invisible.                 |
+| `invisibilityOfAllElements(List<WebElement> elements)` | Waits until all elements are invisible.                   |
+| `stalenessOf(WebElement element)`                      | Waits until given element is detached from DOM.           |
+
+---
+
+### **Text-Related**
+
+| Method                                                           | What It Does                                                    |
+| ---------------------------------------------------------------- | --------------------------------------------------------------- |
+| `textToBePresentInElement(WebElement element, String text)`      | Waits until given element contains text.                        |
+| `textToBePresentInElementLocated(By locator, String text)`       | Same as above but locator-based.                                |
+| `textToBePresentInElementValue(By locator, String text)`         | Waits until `<input>` or `<textarea>` contains the given value. |
+| `textToBePresentInElementValue(WebElement element, String text)` | Same but WebElement-based.                                      |
+| `textMatches(By locator, Pattern pattern)`                       | Waits until element text matches regex.                         |
+| `textMatches(WebElement element, Pattern pattern)`               | Same but WebElement-based.                                      |
+
+---
+
+### **Attribute & Selection**
+
+| Method                                                             | What It Does                                    |
+| ------------------------------------------------------------------ | ----------------------------------------------- |
+| `attributeToBe(WebElement element, String attr, String value)`     | Waits until element’s attribute equals value.   |
+| `attributeToBe(By locator, String attr, String value)`             | Locator-based version.                          |
+| `attributeContains(WebElement element, String attr, String value)` | Waits until attribute contains value.           |
+| `attributeContains(By locator, String attr, String value)`         | Locator-based.                                  |
+| `attributeToBeNotEmpty(WebElement element, String attr)`           | Waits until attribute is not empty.             |
+| `attributeToBeNotEmpty(By locator, String attr)`                   | Locator-based.                                  |
+| `elementSelectionStateToBe(WebElement element, boolean selected)`  | Waits until checkbox/radio has selection state. |
+| `elementSelectionStateToBe(By locator, boolean selected)`          | Locator-based.                                  |
+| `elementToBeSelected(WebElement element)`                          | Waits until element is selected.                |
+| `elementToBeSelected(By locator)`                                  | Locator-based.                                  |
+
+---
+
+### **Frames**
+
+| Method                                                     | What It Does                                 |
+| ---------------------------------------------------------- | -------------------------------------------- |
+| `frameToBeAvailableAndSwitchToIt(int index)`               | Waits for frame (by index) & switches to it. |
+| `frameToBeAvailableAndSwitchToIt(String nameOrId)`         | Frame by name or id.                         |
+| `frameToBeAvailableAndSwitchToIt(WebElement frameElement)` | Frame by WebElement.                         |
+| `frameToBeAvailableAndSwitchToIt(By locator)`              | Frame by locator.                            |
+
+---
+
+### **Alerts**
+
+| Method             | What It Does                         |
+| ------------------ | ------------------------------------ |
+| `alertIsPresent()` | Waits until an alert box is present. |
+
+---
+
+### **Number of Elements**
+
+| Method                                                 | What It Does                                                 |
+| ------------------------------------------------------ | ------------------------------------------------------------ |
+| `numberOfElementsToBe(By locator, int number)`         | Waits until number of matching elements equals given number. |
+| `numberOfElementsToBeLessThan(By locator, int number)` | Waits until count is less than number.                       |
+| `numberOfElementsToBeMoreThan(By locator, int number)` | Waits until count is greater than number.                    |
+| `numberOfWindowsToBe(int number)`                      | Waits until window/tab count equals number.                  |
+
+---
+
+### **Miscellaneous**
+
+| Method                                                   | What It Does                                         |
+| -------------------------------------------------------- | ---------------------------------------------------- |
+| `titleIs(String title)`                                  | Waits until page title matches exactly.              |
+| `titleContains(String title)`                            | Waits until page title contains text.                |
+| `urlToBe(String url)`                                    | Waits until current URL matches exactly.             |
+| `urlContains(String fraction)`                           | Waits until URL contains text.                       |
+| `urlMatches(String regex)`                               | Waits until URL matches regex.                       |
+| `refreshed(ExpectedCondition<T> condition)`              | Waits for condition to be true after a page refresh. |
+| `javaScriptThrowsNoExceptions(String script)`            | Waits until JS runs without error.                   |
+| `javaScriptResultEquals(String script, Object expected)` | Waits until JS result matches.                       |
+
+---
+
+=============================================================================================================================
+
+
+
+
 
 
 
