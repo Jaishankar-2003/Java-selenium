@@ -474,7 +474,14 @@ getwindowhandles()
 driver.switchto().window(winid)
 
 // approach 1 normal : switch to using LIST AND SET
-// approach 2 looping method : 
+// approach 2 looping method :
+
+====================================================================================================================
+
+Javascript Alerts
+
+driver.switchTo().alert().accept();
+driver.switchTo().alert().dismiss();
 
 
 
