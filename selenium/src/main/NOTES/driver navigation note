@@ -1,10 +1,10 @@
-🔁 driver.navigate().to("https://letcode.in/");
+🔁 driver.navigate().to("https://letcode.in/"); -----------> it accept both  in string format and object format
 Belongs to: navigate() interface of WebDriver.
 Use Case: Think of this like a browser navigation button (like hitting a link or entering a URL).
 ✅ Supports forward(), back(), and refresh() operations too.
 Good for: Simulating realistic browsing behavior, like going back and forth between pages.
 
-🚀 driver.get("https://letcode.in/edit/");
+🚀 driver.get("https://letcode.in/edit/"); ------------->    it accept only in string  format
 Belongs to: Core WebDriver interface.
 Use Case: It loads a new page, waits until the page is fully loaded before going further.
 ✅ It’s simpler and straight-up meant for just landing on a URL.

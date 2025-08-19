@@ -435,11 +435,46 @@ use
 
 1 conditional based it will work more efficient
 2 finding element is inclusive(for some condition)
-3 it will wait for condition to be true , then consider the time
+3 it will wait for conition to be true , then consider the time
 4 we need to write multiple statement for multiple element
+-----------------------------------------------------------------------------------------------------------
+FLUENT WAIT DECLARATION
+
+wait<Webdriver> mywait = new Fluentwait<Web driver>(driver).waitTimeout(Duration.ofsec(30)).pollingEvery(Duration.ofsec(5))
+                                                                                           .ignoring(NosuchelementException.class);
+
+WebElement txtUsername mywait.until(new Function<WebDriver, WebElement>() {
+
+public WebElement apply(WebDriver driver) (return driver.findElement(By.xpath("//input[@placeholder
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+NAVIGATION COMMANDS
+---------------------
+
+1 navigate().to(url)  ------------->   it accept both string format and  and object method format    or optional create
+driver.navigate().to("url")
+        or
+url myurl = new url("url")  ---------> these is java package
+driver.navigate().to(myurl)
+        or
+driver.get("https://letcode.in/edit/"); ------------->    it accept only in string format only
 
 
+2 navigate().back()    <--
+3 navigate().forward()  -->
+4 navigate().refresh()
 
+-----------------------------------------------------------------------------------------------------------------
+
+getwindowhandle()
+getwindowhandles()
+
+
+driver.switchto().window(winid)
+
+// approach 1 normal : switch to using LIST AND SET
+// approach 2 looping method : 
 
 
 
