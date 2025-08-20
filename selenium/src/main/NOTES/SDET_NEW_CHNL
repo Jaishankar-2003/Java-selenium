@@ -480,11 +480,20 @@ driver.switchto().window(winid)
 
 Javascript Alerts
 
+Alert myalert = driver.switchto().alert()
+
 driver.switchTo().alert().accept();
 driver.switchTo().alert().dismiss();
+driver.switchTo().alert().getText();
+driver.switchTo().alert().sendkeys("text");
 
+Alert alert = mywait.until(ExpectedConditions.alertIsPresent());  by using explicit condition
 
+Authentication popup :
 
+http://username:password@the-internet.herokuapp.com/basic_auth   --- syntax
+
+http://admin:admin@the-internet.herokuapp.com/basic_auth
 
 
 
