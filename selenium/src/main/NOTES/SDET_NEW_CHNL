@@ -495,14 +495,32 @@ http://username:password@the-internet.herokuapp.com/basic_auth   --- syntax
 
 http://admin:admin@the-internet.herokuapp.com/basic_auth
 
+======================================================================================================================
 
+frames / iframes
+-------------------
 
+driver.Switchto().frame(name)
+driver.Switchto().frame(id)
+driver.Switchto().frame(webElement)
+driver.Switchto().frame(index)   // index is recomended if  only 1 frame is available in the page ( 0 )
 
+driver.Switchto().defaultContent();  // it get back to home page
 
+3 type of switch methods
+-----------------------------
 
+1 browser windows
+    driver.Switchto().window(win id / win handle)
 
+2 alerts
+    driver.Switchto().alert()
+    driver.Switchto().accept()
+    driver.Switchto().dismiss()
 
-
-
+3 frame
+    driver.Switchto().frame(id);
+    driver.Switchto().frame(name);
+    driver.Switchto().frame(WebElement);
 
 

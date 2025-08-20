@@ -33,9 +33,9 @@ public class frames {
         driver.findElement(By.name("email")).sendKeys("test");
 
         //BACK TO PARENT FRAME
-        // mainframe --> f1 --> f2
+        // mainframe f0 --> f1 --> f2
         //if f2 -->f1 --> switch to parent ()
-        //if f2 --> mainframe --> default conent
+        //if f2 --> mainframe f0 --> default conent
 
         driver.switchTo().parentFrame();
         driver.findElement(By.name("lname")).sendKeys("test to back");

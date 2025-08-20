@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class SDET_alert {
-    public static void main(String[] args) //throws InterruptedException
+    public static void main(String[] args) throws InterruptedException
     {
         WebDriver driver = new ChromeDriver();
         //driver.get("https://testautomationpractice.blogspot.com/");
@@ -60,6 +60,7 @@ public class SDET_alert {
         //Alert alert = driver.switchTo().alert();
         System.out.println(alert.getText());
         alert.accept();
+        driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth ");  // authentication popup
 
 
 
