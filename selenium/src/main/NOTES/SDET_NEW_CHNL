@@ -523,4 +523,43 @@ driver.Switchto().defaultContent();  // it get back to home page
     driver.Switchto().frame(name);
     driver.Switchto().frame(WebElement);
 
+====================================================================================================================
+
+DROPDOWN    ( SELECT TAG )
+------------------
+
+1 select dropdown     ----->  it contain select in html it known as select dropdown
+2 bootstrap dropdown
+3 hidden dropdown
+
+1 SELECT dropdown ----> for these we can use the SELECT CLAUSE IT WORK ONLY FOR SELECT ELEMENT contain in the html
+
+SelectByVisibleText()
+SelectByValue()
+SelectByIndex()
+
+ < Selected id='Country'>
+        <option value="in"> india <option>
+
+getoption() ------> return all the option from the dropdown as a webelement
+
+
+        // SELECT MULTIPLE OPTION  (for bootstrap dropdown)
+
+        FOR(webelement op : options)
+        {
+            String option = op.getText();
+            if( options.equals("java") ||  options.equals("python") ||  options.equals("mysql"))
+               {
+                    op.click();
+
+               }
+        }
+
+3 hidden dropdown ( select element by selector hub debugger option )
+
+with out use the debuger
+
+driver.find
+
 

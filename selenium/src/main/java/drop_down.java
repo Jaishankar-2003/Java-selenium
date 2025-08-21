@@ -104,15 +104,6 @@ public class drop_down {
         If you don't deselect first, your test could accidentally keep previous selections, causing wrong results or flaky behavior.
         */
 
-
-
-
-
-
-
-
-
-
         driver.quit();
 
         //
