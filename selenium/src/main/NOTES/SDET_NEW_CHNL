@@ -556,10 +556,17 @@ getoption() ------> return all the option from the dropdown as a webelement
                }
         }
 
-3 hidden dropdown ( select element by selector hub debugger option )
+3 hidden dropdown ( select element by selector hub debugger option )   [HAVE DOUBT ON THESE]
 
 with out use the debuger
 
-driver.find
+==============================================================================================================================
+auto suggest dropdown
+
+search : selenium
+
+//ul[@role='listbox']//li//div[@role='option']
+
+
 
 

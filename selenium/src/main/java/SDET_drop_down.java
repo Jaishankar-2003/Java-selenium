@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;    // web driver is an interface
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 import java.time.Duration;
 import java.util.List;
@@ -9,13 +11,12 @@ import java.util.List;
 
 public class SDET_drop_down
 {
-    public static void main (String[] args)
+    public static void main (String[] args) throws InterruptedException
     {
         WebDriver driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-
         /*
         driver.get("https://testautomationpractice.blogspot.com/");
         driver.manage().window().maximize();
@@ -71,7 +72,7 @@ public class SDET_drop_down
 
                }
         }
-         */
+
 
 
         // SELECT HIDDEN DROPDOWN
@@ -81,6 +82,57 @@ public class SDET_drop_down
         driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.xpath("//a[normalize-space()='PIM']")).click();
+        List <WebElement> option = driver.findElements(By.xpath("//body/div[@id='app']/div[@class='oxd-layout orangehrm-upgrade-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']/div[@class='oxd-table-filter']/div[@class='oxd-table-filter-area']/form[@class='oxd-form']/div[@class='oxd-form-row']/div[@class='oxd-grid-4 orangehrm-full-width-grid']/div[6]/div[1]/div[2]/div[1]/div[1]"));
+        System.out.println(option.size());
+
+        for(WebElement opt : option)
+        {
+            String optio = opt.getText();
+            System.out.println(opt.getText());
+        }
+
+         */
+
+        // AUTO SUGGEST DROP DOWN
+
+        driver.get("https://www.google.com/");
+        driver.findElement(By.name("q")).sendKeys("SELENIUM");
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[@role='listbox']//li//div[@role='option']")));
+
+        Thread.sleep(1000);
+
+        List<WebElement> option = driver.findElements(By.xpath("//ul[@role='listbox']//li//div[@role='option']"));
+
+        System.out.println(option.size());
+
+        /*
+        for(WebElement opt : option)
+        {
+            String optt = opt.getText();
+            System.out.println(optt);
+            if(opt.getText().equals("SELENIUM"))
+            {
+                opt.click();
+                break;
+            }
+       }
+         */
+
+        for(int i = 0; i<option.size(); i++)
+        {
+            System.out.println(option.get(i).getText());
+            if(option.get(i).getText().equals("SELENIUM"))
+            {
+                option.get(i).click();
+                break;
+            }
+        }
+
+
+
 
         driver.quit();
     }
