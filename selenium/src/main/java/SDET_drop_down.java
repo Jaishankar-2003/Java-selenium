@@ -3,8 +3,11 @@ import org.openqa.selenium.WebDriver;    // web driver is an interface
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
+
+import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 
@@ -91,7 +94,7 @@ public class SDET_drop_down
             System.out.println(opt.getText());
         }
 
-         */
+
 
         // AUTO SUGGEST DROP DOWN
 
@@ -108,6 +111,8 @@ public class SDET_drop_down
 
         System.out.println(option.size());
 
+         */
+
         /*
         for(WebElement opt : option)
         {
@@ -119,7 +124,7 @@ public class SDET_drop_down
                 break;
             }
        }
-         */
+
 
         for(int i = 0; i<option.size(); i++)
         {
@@ -130,9 +135,16 @@ public class SDET_drop_down
                 break;
             }
         }
+         */
+        // //div[@class='list-item border-0 list-group-item']//a
+        driver.get("https://www.bjs.com/");
+        driver.findElement(By.xpath("//input[@placeholder='What are you looking for today?']")).sendKeys("men");
 
+        WebDriverWait option = new WebDriverWait(driver,Duration.ofSeconds(10));
+        option.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'list-item border-0')]//b")));
 
-
+        List <WebElement> optionn = driver.findElements(By.xpath("//div[contains(@class,'list-item border-0')]//b"));
+        System.out.println(optionn.size());
 
         driver.quit();
     }

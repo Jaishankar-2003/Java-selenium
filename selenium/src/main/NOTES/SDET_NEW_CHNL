@@ -564,8 +564,27 @@ with out use the debuger
 auto suggest dropdown
 
 search : selenium
-
 //ul[@role='listbox']//li//div[@role='option']
+
+use explicit wait condition
+
+==============================================================================================================
+
+==== WEB TABLES ====
+------------------------
+
+1 STATIC WEB TABLE  == data will same no change
+2 DYNAMIC WEB TABLE == data keepp change num of row keep adding
+3 TABLE WITH PAGINATION
+
+static web table
+//div[@class='widget-content']//table[@name='BookTable']//tr[2]//td[3] == To find single element
+
+//div[@class='widget-content']//table[@name='BookTable']//tr["+r+"]//td["+c+"] == To find dynamic element
+
+=================================================================================================================
+
+
 
 
 
