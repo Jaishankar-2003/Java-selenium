@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.ElementClickInterceptedException;
 
 import java.sql.Driver;
 import java.time.Duration;
@@ -21,7 +23,9 @@ public class SDET_table
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        driver.get("https://testautomationpractice.blogspot.com/");
+        //driver.get("https://testautomationpractice.blogspot.com/");
+
+        /*
 
         // 1. find total number of rows in a table   ,, multiple table in the web page
         int staticc = driver.findElements(By.xpath("//div[@class='widget-content']//table[@name='BookTable']//tr")).size();
@@ -55,7 +59,74 @@ public class SDET_table
                 System.out.println(value);
             }
         }
+         */
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get("https://practice.expandtesting.com/dynamic-pagination-table");
+
+        // get show 1to3 of entire 10
+        String text = driver.findElement(By.xpath("//div[contains(text(),'entries')]")).getText();
+        System.out.println(text);
+
+        // get total number of pages (waste of time)
+        int totalpage =Integer.parseInt(text.substring(text.indexOf("f")+2,text.indexOf("entries")-1));
+        System.out.println(totalpage);
+
+        /*
+
+        // Navigate to the next button
+        for(int p = 1 ; p<=4 ; p++)
+        {
+            if(p>1)
+            {
+                Thread.sleep(2000);
+                WebElement active = driver.findElement(By.xpath("//a[normalize-space()='Next']"));
+                active.click();
+            }
+        }
+
+        //read data ftom the page
+
+        int norow = driver.findElements(By.xpath("//table[@id='example']//tbody//tr")).size();
+
+        for(int r = 1 ; r<= norow ; r++)
+        {
+            String cust = driver.findElement(By.xpath("//table//tbody[@id='demo']//tr["+r+"]//td[2]")).getText();
+            System.out.println(cust);
+        }
+         */
+
+        // loop through pages
+        for (int p = 1; p <= 4; p++)
+        {
+            Thread.sleep(2000);
+
+            // row count
+            int norow = driver.findElements(By.xpath("//table[@id='example']//tbody//tr")).size();
+
+            for (int row = 1; row <= norow; row++)
+            {
+                // column count for each row
+                int nocol = driver.findElements(By.xpath("//table[@id='example']//tbody//tr[" + row + "]//td")).size();
+
+                // read all columns of this row
+                for (int col = 1; col <= nocol; col++)
+                {
+                    String cellData = driver.findElement(
+                            By.xpath("//table[@id='example']//tbody//tr[" + row + "]//td[" + col + "]")
+                    ).getText();
+                    System.out.print(cellData + " | ");
+                }
+                System.out.println();
+            }
+
+            // click Next if not last page
+            if (p < 4)
+            {
+                driver.findElement(By.xpath("//a[normalize-space()='Next']")).click();
+            }
+        }
         driver.quit();
     }
 }
