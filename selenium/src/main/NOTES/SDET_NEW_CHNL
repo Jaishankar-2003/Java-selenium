@@ -584,8 +584,13 @@ static web table
 
 =================================================================================================================
 
+DATE PICKER / CALENDERS
+-------------------------
 
+IF we write data picker automation code for 1 application thoughout we can use the same
 
+The design of the calender should be differ to application , 1 application hava the same design for entire appication
 
+in calender all the number in string ----> input box allow only the string
 
 
