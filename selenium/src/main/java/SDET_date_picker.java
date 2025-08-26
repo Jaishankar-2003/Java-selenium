@@ -12,6 +12,7 @@ import org.openqa.selenium.ElementClickInterceptedException;
 import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.ThreadPoolExecutor;
 
 
 public class SDET_date_picker
@@ -23,7 +24,9 @@ public class SDET_date_picker
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        driver.get("https://jqueryui.com/datepicker/");
+        driver.get("https://testautomationpractice.blogspot.com/");
+
+        /*
 
         // switch to the inner frame
 
@@ -57,12 +60,12 @@ public class SDET_date_picker
             {
                 driver.findElement(By.xpath("//a[@title='Next']")).click(); // go to next month
                 // [for fucture month click next] and [ for previous months click previous button]
-
+            }
         }
             // method 1 Get directly
         driver.findElement(By.xpath("//a[text()='"+date+"']")).click();
 
-        /*
+
         // method 2  select date  by use list
         List <WebElement> alldates = driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']//tbody/tr/td"));
 
@@ -76,12 +79,50 @@ public class SDET_date_picker
 
         }
          */
+        Thread.sleep(1000);
+
+        //date picker 1
+        //driver.findElement(By.xpath("//input[@id='datepicker']")).click();
+        //driver.findElement(By.xpath("//input[@id='datepicker']")).sendKeys("04/09/2025");
+
+        /*
+        // Datepicker 2
+
+        //select month
+        driver.findElement(By.xpath("//input[@id='txtDate']")).click();
+
+        WebElement month = driver.findElement(By.className("ui-datepicker-month"));
+        Select monthh = new Select(month);
+        monthh.selectByVisibleText("Dec");
+
+        //select year
+        WebElement year = driver.findElement(By.className("ui-datepicker-year"));
+        Select yearr = new Select(year);
+        yearr.selectByVisibleText("2025");
+
+        //select date
+        driver.findElement(By.xpath("//a[text()='15']")).click();
+         */
+
+        //Datepicker 3
+        WebElement start = driver.findElement(By.xpath("//input[@id='start-date']"));
+        start.sendKeys("07/26/2025");
+
+        WebElement end = driver.findElement(By.xpath("//input[@id='end-date']"));
+        end.sendKeys("10/28/2025");
+
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@class='submit-btn']")).click();
+
+
+        Thread.sleep(2000);
 
 
 
 
-        driver.quit();
 
 
+
+            driver.quit();
     }
 }

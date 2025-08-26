@@ -593,4 +593,43 @@ The design of the calender should be differ to application , 1 application hava 
 
 in calender all the number in string ----> input box allow only the string
 
+=====================================================================================================================
+
+MOUSE ACTIONS
+-----------------
+mouse hover -------> moveToElement(element)
+
+right click -------> contextClick(element).perform();
+                     ---------------------
+
+double click -------> doubleclick(element)
+
+drag and drop --------> dragAndDrop(source , target)
+
+
+ACTIONS CLASS IS AN PRE DEFINED CLASS provide in selenium
+-------------
+
+Actions -----> class, will be used to perform mouse actions,
+
+Action -------> interface, will be used to store created actions
+
+
+
+
+build ----> create an action
+
+Action myvar = act.contextclick(element).build(); ----> build create an action and store in var
+myvar.perform() ------> we perform / complete action when ever we want these
+
+perform ------> complete an action
+
+get text() only capture the inner text of the element
+
+
+
+
+
+
+
 
