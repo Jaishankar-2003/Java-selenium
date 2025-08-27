@@ -646,9 +646,20 @@ Enter :
 
 act.keyDown(keys.ENTER).keyUp(keys.ENTER).perform();
 
+========================================================================================================================
 
+JAVASCRIPT_EXECUTOR --------> Interface
+---------------------
 
+executeScript() = we can execute javascript statements directly
 
+alternative of both
+sendkeys()
+click()
 
+ WebDriver driver = new ChromeDriver(); -------->   JavascriptExecutor js=(JavascriptExecutor) driver;
 
+ ChromeDriver driver = new ChromeDriver; --------> JavascriptExecutor js = driver;
 
+Scrolling page
+----------------
