@@ -615,8 +615,6 @@ Actions -----> class, will be used to perform mouse actions,
 Action -------> interface, will be used to store created actions
 
 
-
-
 build ----> create an action
 
 Action myvar = act.contextclick(element).build(); ----> build create an action and store in var
@@ -626,6 +624,27 @@ perform ------> complete an action
 
 get text() only capture the inner text of the element
 
+=====================================================================================================================
+
+SLIDER ACTION
+------------------
+dragAndDropBy(Element,X,Y)
+Keyboard Actions - Actions
+
+=======================================================================================
+
+KEY_BOARD ACTION
+-----------------------
+
+keyDown()
+keyUp()
+
+ctrl+shit+A
+act.keyDown(Keys.CONTROL).keyDown(keys.SHIFT).sendkeys("A").keyUp(Keys.SHIFT).keyUp(Keys.CONTROL).perform();
+
+Enter :
+
+act.keyDown(keys.ENTER).keyUp(keys.ENTER).perform();
 
 
 
