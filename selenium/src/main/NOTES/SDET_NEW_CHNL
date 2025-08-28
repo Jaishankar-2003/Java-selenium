@@ -663,3 +663,21 @@ click()
 
 Scrolling page
 ----------------
+
+        // 1 scroll page by pixel number
+        js.executeScript("window.scrollBy(0,250)","");
+        System.out.println(js.executeScript("return window.pageYOffset;")); ---------->  it shows the pixel value of the element
+
+        // 2 scroll page till the element is visible in page;
+        js.executeScript("arguments[0].scrollIntoView();",element);   --------> it works based on the element visibility
+
+
+        // 3 scroll page till end of the page
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)"); -------> it scroll till the end of the page
+
+
+        // 4 Scroll back to the initial position
+        js.executeScript("window.scrollBy(0,-document.body.scrollHeight)"); ------> it scroll to the initial page
+
+        // set zoom level
+        js.executeScript("document.body.style.zoom='50%'");

@@ -48,16 +48,26 @@ public class SDET_javascript_executor
 
        // 1 scroll page by pixel number
         js.executeScript("window.scrollBy(0,250)","");
-
         System.out.println(js.executeScript("return window.pageYOffset;"));
 
         // 2 scroll page till the element is visible in page;
         WebElement visi = driver.findElement(By.xpath("//h2[normalize-space()='Scrolling DropDown']"));
         js.executeScript("arguments[0].scrollIntoView();",visi);
-        Thread.sleep(1000);
         System.out.println(js.executeScript("return window.pageYOffset;"));
 
-        //
+        // 3 scroll page till end of the page
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        System.out.println(js.executeScript("return window.pageYOffset;"));
+
+        // 4 Scroll back to the initial position
+        js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
+        System.out.println(js.executeScript("return window.pageYOffset;"));
+
+        js.executeScript("document.body.style.zoom='50%'"); // set zoom level
+        Thread.sleep(3000);
+
+        driver.manage().window().minimize();
+
 
 
 
