@@ -695,3 +695,4 @@ Scrolling page
 String file1 = "/home/sri-jaya-shankaran/Documents/driver.txt";
 String file2 = "/home/sri-jaya-shankaran/Documents/temp of report.txt";
 driver.findElement(By.xpath("//input[@id='multipleFilesInput']")).sendKeys(file1+"\n"+file2);
+=======================================================================================================================
