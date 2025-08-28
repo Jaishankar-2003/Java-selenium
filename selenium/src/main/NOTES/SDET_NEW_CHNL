@@ -681,3 +681,17 @@ Scrolling page
 
         // set zoom level
         js.executeScript("document.body.style.zoom='50%'");
+
+==============================================================================================================================================
+
+ upload files       In selenium its not recommended
+ ----------------
+
+ // single file uploaded
+ driver.findElement(By.xpath("//input[@id='singleFileInput']")).sendKeys("/home/sri-jaya-shankaran/Documents/driver.txt");
+
+// multiple file upload
+
+String file1 = "/home/sri-jaya-shankaran/Documents/driver.txt";
+String file2 = "/home/sri-jaya-shankaran/Documents/temp of report.txt";
+driver.findElement(By.xpath("//input[@id='multipleFilesInput']")).sendKeys(file1+"\n"+file2);

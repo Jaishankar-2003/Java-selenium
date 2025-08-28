@@ -63,13 +63,36 @@ public class SDET_javascript_executor
         js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
         System.out.println(js.executeScript("return window.pageYOffset;"));
 
-        js.executeScript("document.body.style.zoom='50%'"); // set zoom level
-        Thread.sleep(3000);
-
-        driver.manage().window().minimize();
+        //js.executeScript("document.body.style.zoom='50%'"); // set zoom level
 
 
+        //driver.manage().window().minimize();
 
+
+        // single file uploaded
+        driver.findElement(By.xpath("//input[@id='singleFileInput']")).sendKeys("/home/sri-jaya-shankaran/Documents/driver.txt");
+
+        if(driver.findElement(By.xpath("//input[@id='singleFileInput']")).getText().equals("driver.txt"))
+        {
+          System.out.println("succs");
+        }
+        else
+        {
+            System.out.println("fail");
+        }
+
+        driver.findElement(By.xpath("//button[normalize-space()='Upload Single File']")).click();
+
+
+        // MULTIPLE FILE UPLOAD
+
+        String file1 = "/home/sri-jaya-shankaran/Documents/driver.txt";
+        String file2 = "/home/sri-jaya-shankaran/Documents/temp of report.txt";
+
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//input[@id='multipleFilesInput']")).sendKeys(file1+"\n"+file2);
+        driver.findElement(By.xpath("//button[normalize-space()='Upload Multiple Files']")).click();
 
 
 
