@@ -8,9 +8,6 @@ link text - partial link text
 class name
 tag name
 
-
-
-
 ------------
 CUSTOMIZED LOCATORS
 ______________
@@ -696,3 +693,33 @@ String file1 = "/home/sri-jaya-shankaran/Documents/driver.txt";
 String file2 = "/home/sri-jaya-shankaran/Documents/temp of report.txt";
 driver.findElement(By.xpath("//input[@id='multipleFilesInput']")).sendKeys(file1+"\n"+file2);
 =======================================================================================================================
+
+chromeOptions()
+EdgeOptions()
+FirefoxOptions()
+
+chromeOptions()
+-------------------
+
+1 Headless Testing   --------> run the test case in backend  , parallell we can do anything
+  -----------------
+ChromeOptions option = new ChromeOptions();
+
+option.addArguments("--headless=new");  // setting for headless mode of execution
+
+WebDriver driver = new ChromeDriver(option)
+
+adv
+-----
+1 we can do multiple task
+2 faster execution
+3 prefer in end of the product
+
+dis
+----
+1 user dont know any thing  happen on web page ( dont know the flow of functionality)
+----------------------------------------------------------------------------------------------------------------
+
+2 SSL HANDLING
+------------------
+
