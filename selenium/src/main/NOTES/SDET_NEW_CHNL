@@ -701,7 +701,7 @@ FirefoxOptions()
 chromeOptions()
 -------------------
 
-1 Headless Testing   --------> run the test case in backend  , parallell we can do anything
+1 Headless Testing   --------> run the test case in backend  , parallel we can do anything
   -----------------
 ChromeOptions option = new ChromeOptions();
 
@@ -722,4 +722,44 @@ dis
 
 2 SSL HANDLING
 ------------------
+ ChromeOptions option = new ChromeOptions();
+ option.setAcceptInsecureCerts(true); // accept the ssl certificate
+
+
+---------------------------------------------------------------------------------------
+
+3 To remove Chrome is being controlled by automated test software
+-----------------------------------------------------------------
+ ChromeOptions option = new ChromeOptions();
+ option.setExperimentalOption("excludeSwitches",new String[] {"enable-automation"});
+
+
+4 Run it in incognita mode or private mode
+-----------------------------------------------
+ ChromeOptions option = new ChromeOptions();
+ option.addArguments("--incognito");
+
+
+5  Enable browser extentions in run time
+-----------------------------------------
+
+chromeOption options = new chromeoptions();
+options.addExtensions(new File("--file location--"));
+
+================================================================================================================
+
+    BROKEN links
+  ----------------
+
+1  link  href = "https://xyz.com"
+
+2  https://xyz.com -----> server -----> status code
+
+3 status code >= 400   broken link
+
+  status code < 400    not a broken link
+
+
+
+
 
