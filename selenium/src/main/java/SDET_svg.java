@@ -2,21 +2,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.net.UrlChecker;
-import java.net.URL;
-import java.net.HttpURLConnection;
 
-
-import javax.print.DocFlavor;
-import java.io.File;
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.time.Duration;
-import java.util.List;
+
 
 public class SDET_svg {
     public static void main(String[] args) throws IOException {

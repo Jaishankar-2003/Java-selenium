@@ -788,5 +788,43 @@ svg not allowed absolute xpath
 
 only find by NAME method = //*[name()='circle' and contains(@cx,'15')]
 
+===========================================================================================================================
+
+     Day 40
+     --------
+     Apache poi library
+     ---------------------
+
+     dependencies in pom.xml
+     -------------------------
+
+      <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+             <dependency>
+                 <groupId>org.apache.poi</groupId>
+                 <artifactId>poi</artifactId>
+                 <version>5.4.1</version>
+             </dependency>
+
+
+             <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+             <dependency>
+                 <groupId>org.apache.poi</groupId>
+                 <artifactId>poi-ooxml</artifactId>
+                 <version>5.4.1</version>
+             </dependency>
+
+      Excel file -----> Workbook ------> sheet -----> Rows ------> Cells
+
+      FileInputStream - reading
+      FileOutputStream - writing
+
+      XSSFWorkbook ---- Workbook
+      XSSFSheet  --- sheet
+      XSSFRow --- row
+      XSSFCell --- Cell
+
+      1 read data from excel  -- excel file have some data
+
+
 
 
