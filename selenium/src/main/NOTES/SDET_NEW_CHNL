@@ -751,6 +751,9 @@ options.addExtensions(new File("--file location--"));
     BROKEN links
   ----------------
 
+logic for broken link
+------------------------
+
 1  link  href = "https://xyz.com"
 
 2  https://xyz.com -----> server -----> status code
@@ -760,6 +763,30 @@ options.addExtensions(new File("--file location--"));
   status code < 400    not a broken link
 
 
+
+  SHADOW DOM ELEMENT ( DOM --> DOCUMENT OBJECT MODEL )
+----------------------------------------------------------
+
+XPATH CANNOT HANDLE shadow dom element
+ONLY CSS handle shadow dom element
+
+SHADOW HOST ------> ROOT -------> ( Tree group of elements )ELEMENT
+
+// This element is insight single shadow DOM.
+
+SearchContext shadow = driver.findelement(By.cssSelector("#shadow-root")).getshadowRoot();
+Thread.sleep(1000);
+shadow.findelement(By.cssSelector("#shadow-element"));
+
+https://dev.automationtesting.in/shadow-dom
+-----------------------------------------------------------------------------------------------------------------
+
+ SVG ELEMENTS
+ --------------
+
+svg not allowed absolute xpath
+
+only find by NAME method = //*[name()='circle' and contains(@cx,'15')]
 
 
 

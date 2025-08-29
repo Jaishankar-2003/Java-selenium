@@ -46,9 +46,12 @@ public class SDET_broken_link {
              HttpURLConnection connlink = (HttpURLConnection) linkURL.openConnection(); // open connection to the server
              connlink.connect(); //connect to server and sent request the server
 
-             if (connlink.getResponseCode() >= 400) {
+             if (connlink.getResponseCode() >= 400)
+             {
                  System.out.println(hrefv + "broken");
-             } else {
+             }
+             else
+             {
                  System.out.println(hrefv + "not");
              }
 
