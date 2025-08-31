@@ -1,13 +1,48 @@
+
 TEST NG ------> Test New Generation
 
 java based unit test tool
 
 Adv
 -----
-
 1 Test Cases & test suites
 2 Grouping of test case
 3 Prioritize
 4 Parameterization
 5 Parallel test
 6 Reports
+
+Testng config
+-----------------
+
+1 install testng
+2 add testng library to build path / add testng dependency in pom.xml
+
+@Test  -----> annotation    [ Replacement of main method ]
+
+testng method not return any thing
+1 Testng by default it execute in test case in  alphabetical order                         1 ----->  default - alphabet
+2 @Test(priority = num) controls the order of execution                 -                  2 ----->  priority - control execution
+3 once you provide priority to the test methods then order of methods , is not considered .3 ----->  in priority order is not matter
+4 priorities can be random numbers( no need to have consecutive numbers )                  4 ----->  priority have any num not consecutive
+5 if you dont provide priority then default value is zero ( 0 ).                           5 ----->  we dont provide priority defaut is 0
+6 if the priorities are same then again execute methods in alphabetical order.             6 ----->  if priority should same alphabet order only again
+7 Negative values are allowed in priority.                                                 7 ----->  priority allow negative values also
+8 Testng execute test method only if they are having @Test annotation.                     8 ----->  testng work only with @Test annotation.
+
+
+Execute test cases using testng XML file
+------------------------------------------
+1 Generate automatically
+2 manually
+
+Test suit ------> group of Test cases
+
+Test suite ----> multiple (Test cases) ----> Test steps
+Xml file ----> classes ----> Test methods
+
+2 things achived through xml
+---------------------
+1 execute group of test cases as a 1 suite
+2 we can generate test reports (default)
+
