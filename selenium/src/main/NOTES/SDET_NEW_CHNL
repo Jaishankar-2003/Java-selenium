@@ -830,7 +830,6 @@ Data Driven testing
 -----------------------
     update all data on excel by use of updated data on the excel we can test the component
 
-
     1 functionality (Test case)
     2 prepare test data in excel
     3 develop automation script

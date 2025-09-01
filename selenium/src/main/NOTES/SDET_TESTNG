@@ -46,3 +46,148 @@ Xml file ----> classes ----> Test methods
 1 execute group of test cases as a 1 suite
 2 we can generate test reports (default)
 
+
+
+Annotations      --------->   it control the order of execution
+------------
+
+Got it 💯 — here’s the **short & crisp one-liners**:
+
+    @BeforeMethod** → Runs before each @Test method**.
+
+    @AfterMethod** → Runs after each @Test method**.
+
+    @BeforeClass** → Runs once before the first @Test in the class**.
+
+    @AfterClass** → Runs **once after all @Test in the class**.
+
+    @BeforeTest** → Runs **before all @Test methods inside `<test>` tag in XML**.
+
+*   @AfterTest** → Runs **after all @Test methods inside `<test>` tag in XML**.
+
+    @BeforeSuite** → Runs **once before the entire suite starts**.
+
+*   @AfterSuite** → Runs **once after the entire suite ends**.
+
+---
+
+⚡ Easy way to remember:
+
+* **Method → around each test method**
+* **Class → around class**
+* **Test → around `<test>` in XML**
+* **Suite → around whole suite**
+
+-------------------------------------------------------------------------------------------------
+Annotations
+-------------
+@Test
+
+@BeforeMethod
+@AfterMethod
+
+@BeforeClass  ------> single class
+@AfterClass
+
+@BeforeTest   ------> multiple class
+@AfterTest
+
+@BeforeSuit
+@AfterSuite
+
+
+Tc1 -----> method
+----
+1 login ----> @BeforeMethod
+2 Search ----> @Test
+3 Logout ----> @AfterMethod
+4 Login ----> @BeforeMethod
+5 Adv Search ----> @Test
+6 Logout ---->  @AfterMethod
+
+Tc2  --------> class
+----
+1 login ----> @BeforeClass
+2 Search ----> @Test
+5 Adv Search ----> @Test
+6  Logout ----> @AfterClass
+
+xml ----> test
+------
+
+<suite name="my suit">             ---------> BeforeSuite
+
+    <test name="my test1">        --------> TestBefore
+        <classes>
+            <class name="abc"/>
+        </classes>               ---------> TestAfter
+    </test>
+
+    test name="my test2">           --------> TestBefore
+            <classes>
+                <class name="xyz"/>
+            </classes>
+        </test>                     ---------> TestAfter
+
+</suite>                        ---------> AfterSuite
+
+===========================================================================================================
+
+Assert is an pre defined class which we used for access tha different type of assertion
+
+Assertion - validation point   ------->   import org.testng.Assert;
+
+2 kind of assertions
+---------------------
+1 Hard assertion
+   --------------
+    we can access form Assert class methods are static
+    if hard assertion failed the rest of statement will not be executed
+
+Static methods
+------------------
+
+Assert.assertEquals();
+Assert.assertNotEquals();
+Assert.assertTrue(true);
+Assert.assertTrue(1==1);
+Assert.assertFalse(1==2);
+
+Assert.fail();
+
+why hard assertion is not always recommended ?
+
+void test()
+{
+    S.o.p("test")
+    S.o.p("test")
+    Assert.assertEquals(1,2);  if the condition pass all statements will run with out error
+                               if the condition fail remaining statements is not run
+                               last step only assertion  but 99% of time we use hard assertion
+    S.o.p("test")  // not run
+    S.o.p("test")  // not run
+}
+----------------------------------------------------------------------------------------------------------------
+2 Soft assertion
+  ---------------
+  we can access softAssert object
+    if soft Assert got fail then rest of the statements still execute
+
+    assert are non static
+
+   SoftAssert sa = new SoftAssert();
+
+   void test()
+   {
+       S.o.p("test")
+       S.o.p("test")
+
+       SoftAssert sa = new SoftAssert();
+       sa.assertEquals(1,2);       Even if the condition fail rest of the condition should run and execute the result
+
+       S.o.p("test")
+       S.o.p("test")
+
+       sa.assertAll(); // mandatory
+   }
+
