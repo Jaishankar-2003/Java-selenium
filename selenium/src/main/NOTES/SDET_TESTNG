@@ -212,4 +212,21 @@ sanity
 regression
 functional
 
+loginby fb  - sanity
+loginby mail  - sanity
+loginby twitter - sanity
 
+signup fb - regression
+signup twitter - regression
+signup mail - regression
+
+pay rupe - sanity , regression (functional)
+pay dollar - sanity , regression (functional)
+
+// ! check group.xml created
+
+1 all sanity teste
+2 all regression tests
+3 all sanity but not regression
+4 all regression but not sanity
+5 all method which are belong to both sanity and regression
