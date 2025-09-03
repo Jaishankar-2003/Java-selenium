@@ -51,8 +51,6 @@ Xml file ----> classes ----> Test methods
 Annotations      --------->   it control the order of execution
 ------------
 
-Got it 💯 — here’s the **short & crisp one-liners**:
-
     @BeforeMethod** → Runs before each @Test method**.
 
     @AfterMethod** → Runs after each @Test method**.
@@ -69,7 +67,7 @@ Got it 💯 — here’s the **short & crisp one-liners**:
 
 *   @AfterSuite** → Runs **once after the entire suite ends**.
 
----
+----------------
 
 ⚡ Easy way to remember:
 
@@ -251,6 +249,9 @@ PARAMETERIZATION
 
     @DataProvider(name = "dp" , indices = {4}) ---------> indices is used for run the specific data we want to run
 
+    @DataProvider(name = "dp" , indices = {0,4}) -------->  here 0'th index element and  4'th index element should execute
 
+
+------------------------------------------------------------------------------------------------------------------------------------------
 
 2 using xml file to pass parameterization ----->  parallel testing
