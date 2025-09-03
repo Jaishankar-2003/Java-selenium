@@ -236,5 +236,21 @@ pay dollar - sanity , regression (functional)
 PARAMETERIZATION
 -------------------
 
-1 @DataProvider ----- > (Data driven testing)
+1 @DataProvider ----- > (Data driven testing)  it don't want any looping statements to run multiple test cases multiple times
+
+    if we have multiple data provider
+
+    test1(data provider = "dp1")
+    test2(data provider = "dp2")
+
+    data provider(name = "dp1")
+    data provider(name = "dp2")
+
+    in realtime separate class for Data provider for access where ever we want
+
+
+    @DataProvider(name = "dp" , indices = {4}) ---------> indices is used for run the specific data we want to run
+
+
+
 2 using xml file to pass parameterization ----->  parallel testing

@@ -17,12 +17,13 @@ public class Testng_dataProvider1
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-    @Test
-    void testlogin() throws InterruptedException {
+    @Test(dataProvider = "dp")
+    void testlogin(String username , String pwd) throws InterruptedException
+    {
         driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys("jaishankar98421@gmail.com");
-        driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("Test12345");
+        driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(username);
+        driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(pwd);
         driver.findElement(By.xpath("//input[@value='Login']")).click();
         boolean status = driver.findElement(By.xpath("//span[normalize-space()='My Account']")).isDisplayed();
         if(status == true)
@@ -36,9 +37,17 @@ public class Testng_dataProvider1
             Assert.fail();
         }
     }
-    void teardown()
+    @DataProvider(name = "dp" , indices = {4})
+    Object[][] loginData()       // data provider method always return two dimentional array (object , string , int , boolean)
     {
-
+        Object data[][] = {
+                            {"abc@gmail.com","test123"},
+                            {"xyz@gmail.com","test023"},
+                            {"john@gmail.com","test@123"},
+                            {"johnkenedy@gmail.com","test"},
+                            {"jaishankar98421@gmail.com","Test12345"}
+                           };
+        return data;
     }
 
 }
