@@ -220,7 +220,7 @@ signup fb - regression
 signup twitter - regression
 signup mail - regression
 
-pay rupe - sanity , regression (functional)
+pay rupee - sanity , regression (functional)
 pay dollar - sanity , regression (functional)
 
 // ! check group.xml created
@@ -230,3 +230,11 @@ pay dollar - sanity , regression (functional)
 3 all sanity but not regression
 4 all regression but not sanity
 5 all method which are belong to both sanity and regression
+
+=======================================================================================================================
+
+PARAMETERIZATION
+-------------------
+
+1 @DataProvider ----- > (Data driven testing)
+2 using xml file to pass parameterization ----->  parallel testing
