@@ -2,8 +2,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class max_and_min {
-    public static void main (String[] arg) throws InterruptedException {
+public class max_and_min
+{
+    public static void main (String[] arg) throws InterruptedException
+    {
 
         // To open the chrome using simple driver
 
