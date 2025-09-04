@@ -14,8 +14,8 @@ public class Testng_parameter
 {
     WebDriver driver;
     @BeforeTest
-    @Parameters({"browser"})
-    public void login(String br) throws InterruptedException
+    @Parameters({"browser","url"})
+    public void login(String br,String url) throws InterruptedException
     {
         switch (br.toLowerCase())
         {
@@ -25,7 +25,7 @@ public class Testng_parameter
             default:System.out.println("invalid browser");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.get(url);
         driver.manage().window().maximize();
         Thread.sleep(3000);
     }

@@ -4,6 +4,7 @@
 <suite thread-count="5" name="suit" parallel="tests">
     <test name="ChromeTest">
         <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
         <classes>
             <class name="Testng_parameter"/>
         </classes>
@@ -18,6 +19,7 @@
 <!-->
     <test  name="firefox Test">
         <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
         <classes>
             <class name="Testng_parameter"/>
         </classes>
