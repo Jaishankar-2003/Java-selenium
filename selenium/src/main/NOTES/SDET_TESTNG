@@ -255,3 +255,19 @@ PARAMETERIZATION
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 2 using xml file to pass parameterization ----->  parallel testing
+
+parallel test using xml file
+-------------------------------
+
+step 1 : created test case
+step 2 : create xml file then run test case through xml
+step 3 : passed browser name , url as parameter from xml file to setup() method
+step 4 : execute test case on chrome & edge ,firefox (serial execution)
+step 5 : execute test case on chrome & edge ,firefox (parallel execution)
+
+Thread count = "5" ----> 5 memory locator should be create [In selenium not more then 5 thread value is allowed]
+
+In parallel test ( Time taken is less )
+
+In series ( Test time taken is more ) [compare to parallel]
+
