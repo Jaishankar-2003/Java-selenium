@@ -1,23 +1,16 @@
+package Testng_listener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 
-/*
-open app
-test logo
-login
-close
- */
-public class Testng_orangehrm
+public class listener_orange
 {
     WebDriver driver;
     @Test(priority = 1)
-     void openapp()
+    void openapp()
     {
         driver = new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");

@@ -280,3 +280,49 @@ we can perform post action from using lister -------> these case execute based o
 2 create listener class
 3 create xml and include both test case & listener class
 
+
+2 ways to implement listener class
+--------------------------------------
+Method 1
+---------
+class myListener implements ITestListener
+{
+
+}
+Method 2
+-----------
+class myListener extends TestListenerAdapter
+{
+
+}
+-------------------------------------------------------------------------------------------
+NOTES: IN ITestListener
+
+ITestListener:
+Event Monitoring: It provides callback methods that are automatically invoked at different points in a test's lifecycle, such as when a test starts, succeeds, fails, or is skipped.
+Custom Actions: The methods within the ITestListener interface can be overridden to implement custom logic. This allows for actions like:
+Logging test status and details.
+Taking screenshots on test failure.
+Generating custom reports.
+Performing setup or teardown operations related to individual test methods.
+
+Methods: The ITestListener interface includes methods such as:
+
+onStart(ITestContext context): Invoked before any test method in a test context starts.
+
+onFinish(ITestContext context): Invoked after all test methods in a test context have finished.
+
+onTestStart(ITestResult result): Invoked at the beginning of each individual test method.
+onTestSuccess(ITestResult result): Invoked when a test method successfully completes.
+
+onTestFailure(ITestResult result): Invoked when a test method fails.
+
+onTestSkipped(ITestResult result): Invoked when a test method is skipped.
+onTestFailedButWithinSuccessPercentage(ITestResult result): Invoked when a test method fails but is still considered successful based on a defined success percentage.
+
+Implementation: To use ITestListener, a class must implement the ITestListener interface and override the desired methods. This listener class can then be registered with TestNG, either through the testng.xml file or by using the @Listeners annotation on the test class.
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+
