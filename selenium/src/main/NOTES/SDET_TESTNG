@@ -269,5 +269,14 @@ Thread count = "5" ----> 5 memory locator should be create [In selenium not more
 
 In parallel test ( Time taken is less )
 
-In series ( Test time taken is more ) [compare to parallel]
+In series ( Test time taken is more )
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+TestNG Listeners
+----------------------
+we can perform post action from using lister -------> these case execute based on the previous case result
+
+1 create test case
+2 create listener class
+3 create xml and include both test case & listener class
 
