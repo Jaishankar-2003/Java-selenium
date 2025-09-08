@@ -299,6 +299,7 @@ class myListener extends TestListenerAdapter
 NOTES: IN ITestListener
 
 ITestListener:
+----------------
 Event Monitoring: It provides callback methods that are automatically invoked at different points in a test's lifecycle, such as when a test starts, succeeds, fails, or is skipped.
 Custom Actions: The methods within the ITestListener interface can be overridden to implement custom logic. This allows for actions like:
 Logging test status and details.
@@ -307,6 +308,7 @@ Generating custom reports.
 Performing setup or teardown operations related to individual test methods.
 
 Methods: The ITestListener interface includes methods such as:
+------------------------------------------------------------------
 
 onStart(ITestContext context): Invoked before any test method in a test context starts.
 
@@ -324,5 +326,15 @@ Implementation: To use ITestListener, a class must implement the ITestListener i
 
 -------------------------------------------------------------------------------------------------------------------
 
+Extent Reports
+---------------------
+Extent Reports is a popular reporting library used in conjunction with TestNG and other testing frameworks to generate detailed and visually appealing test execution reports.
+It provides a way to document the results of automated tests,
+making it easier to analyze and share test outcomes with stakeholders.
 
+Key Features of Extent Reports: (3 main class)
+---------------------------
+ExtentSparkReporter:  UI
+ExtentReports:  populate common info (tester name , OS , browser name)
+ExtentTest:
 
