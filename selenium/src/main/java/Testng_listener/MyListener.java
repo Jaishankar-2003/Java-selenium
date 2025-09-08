@@ -8,15 +8,15 @@ public class MyListener implements ITestListener
 {
     public void onStart(ITestContext context)
     {
-        System.out.println("This is on start Test execution is start ");
+        System.out.println("on start");
     }
     public void onTestStart(ITestResult context)
     {
-        System.out.println("multiple execution before start every test case");
+        System.out.println("on Test start");
     }
     public void onTestSuccess(ITestResult context)
     {
-        System.out.println("Test pass");
+        System.out.println("on Test success");
     }
     public void onTestFailure(ITestResult context)
     {
@@ -28,6 +28,6 @@ public class MyListener implements ITestListener
     }
     public void onFinish(ITestContext context)
     {
-        System.out.println("Test execution is completed - onFinish");
+        System.out.println("on_Finish");
     }
 }
