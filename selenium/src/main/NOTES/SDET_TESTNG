@@ -5,36 +5,36 @@ java based unit test tool
 
 Adv
 -----
-1 Test Cases & test suites
-2 Grouping of test case
-3 Prioritize
-4 Parameterization
-5 Parallel test
-6 Reports
+    1 Test Cases & test suites
+    2 Grouping of test case
+    3 Prioritize
+    4 Parameterization
+    5 Parallel test
+    6 Reports
 
 Testng config
 -----------------
 
-1 install testng
-2 add testng library to build path / add testng dependency in pom.xml
+    1 install testng
+    2 add testng library to build path / add testng dependency in pom.xml
 
-@Test  -----> annotation    [ Replacement of main method ]
+    @Test  -----> annotation    [ Replacement of main method ]
 
 testng method not return any thing
-1 Testng by default it execute in test case in  alphabetical order                         1 ----->  default - alphabet
-2 @Test(priority = num) controls the order of execution                 -                  2 ----->  priority - control execution
-3 once you provide priority to the test methods then order of methods , is not considered .3 ----->  in priority order is not matter
-4 priorities can be random numbers( no need to have consecutive numbers )                  4 ----->  priority have any num not consecutive
-5 if you dont provide priority then default value is zero ( 0 ).                           5 ----->  we dont provide priority defaut is 0
-6 if the priorities are same then again execute methods in alphabetical order.             6 ----->  if priority should same alphabet order only again
-7 Negative values are allowed in priority.                                                 7 ----->  priority allow negative values also
-8 Testng execute test method only if they are having @Test annotation.                     8 ----->  testng work only with @Test annotation.
+    1 Testng by default it execute in test case in  alphabetical order                         1 ----->  default - alphabet
+    2 @Test(priority = num) controls the order of execution                 -                  2 ----->  priority - control execution
+    3 once you provide priority to the test methods then order of methods , is not considered .3 ----->  in priority order is not matter
+    4 priorities can be random numbers( no need to have consecutive numbers )                  4 ----->  priority have any num not consecutive
+    5 if you dont provide priority then default value is zero ( 0 ).                           5 ----->  we dont provide priority defaut is 0
+    6 if the priorities are same then again execute methods in alphabetical order.             6 ----->  if priority should same alphabet order only again
+    7 Negative values are allowed in priority.                                                 7 ----->  priority allow negative values also
+    8 Testng execute test method only if they are having @Test annotation.                     8 ----->  testng work only with @Test annotation.
 
 
 Execute test cases using testng XML file
 ------------------------------------------
-1 Generate automatically
-2 manually
+    1 Generate automatically
+    2 manually
 
 Test suit ------> group of Test cases
 
@@ -43,8 +43,8 @@ Xml file ----> classes ----> Test methods
 
 2 things achived through xml
 ---------------------
-1 execute group of test cases as a 1 suite
-2 we can generate test reports (default)
+    1 execute group of test cases as a 1 suite
+    2 we can generate test reports (default)
 
 
 
@@ -71,10 +71,10 @@ Annotations      --------->   it control the order of execution
 
 ⚡ Easy way to remember:
 
-* **Method → around each test method**
-* **Class → around class**
-* **Test → around `<test>` in XML**
-* **Suite → around whole suite**
+    * **Method → around each test method**
+    * **Class → around class**
+    * **Test → around `<test>` in XML**
+    * **Suite → around whole suite**
 
 -------------------------------------------------------------------------------------------------
 Annotations
@@ -145,13 +145,13 @@ Assertion - validation point   ------->   import org.testng.Assert;
 Static methods
 ------------------
 
-Assert.assertEquals();
-Assert.assertNotEquals();
-Assert.assertTrue(true);
-Assert.assertTrue(1==1);
-Assert.assertFalse(1==2);
+    Assert.assertEquals();
+    Assert.assertNotEquals();
+    Assert.assertTrue(true);
+    Assert.assertTrue(1==1);
+    Assert.assertFalse(1==2);
 
-Assert.fail();
+    Assert.fail();
 
 why hard assertion is not always recommended ?
 
@@ -193,17 +193,17 @@ void test()
 Dependency Methods
 -------------------
 
-dependsOnMethods={"methods1","methods2"}
+    dependsOnMethods={"methods1","methods2"}
 
 grouping
 ----------
-grouping should be execute only by xml files
+    grouping should be execute only by xml files
 
-class file -----> methods
+    class file -----> methods
 
-class1 = m1,m2,m3
-class2 = m4,m5,m6..
-class3 = m7,m8,m9..
+    class1 = m1,m2,m3
+    class2 = m4,m5,m6..
+    class3 = m7,m8,m9..
 ---------
 
 sanity
@@ -223,11 +223,11 @@ pay dollar - sanity , regression (functional)
 
 // ! check group.xml created
 
-1 all sanity teste
-2 all regression tests
-3 all sanity but not regression
-4 all regression but not sanity
-5 all method which are belong to both sanity and regression
+    1 all sanity teste
+    2 all regression tests
+    3 all sanity but not regression
+    4 all regression but not sanity
+    5 all method which are belong to both sanity and regression
 
 =======================================================================================================================
 
@@ -276,25 +276,25 @@ TestNG Listeners
 ----------------------
 we can perform post action from using lister -------> these case execute based on the previous case result
 
-1 create test case
-2 create listener class
-3 create xml and include both test case & listener class
+    1 create test case
+    2 create listener class
+    3 create xml and include both test case & listener class
 
 
 2 ways to implement listener class
 --------------------------------------
-Method 1
----------
-class myListener implements ITestListener
-{
+    Method 1
+    ---------
+    class myListener implements ITestListener
+    {
 
-}
-Method 2
------------
-class myListener extends TestListenerAdapter
-{
+    }
+    Method 2
+    -----------
+    class myListener extends TestListenerAdapter
+    {
 
-}
+    }
 -------------------------------------------------------------------------------------------
 NOTES: IN ITestListener
 
@@ -310,31 +310,31 @@ Performing setup or teardown operations related to individual test methods.
 Methods: The ITestListener interface includes methods such as:
 ------------------------------------------------------------------
 
-onStart(ITestContext context): Invoked before any test method in a test context starts.
+    onStart(ITestContext context): Invoked before any test method in a test context starts.
 
-onFinish(ITestContext context): Invoked after all test methods in a test context have finished.
+    onFinish(ITestContext context): Invoked after all test methods in a test context have finished.
 
-onTestStart(ITestResult result): Invoked at the beginning of each individual test method.
-onTestSuccess(ITestResult result): Invoked when a test method successfully completes.
+    onTestStart(ITestResult result): Invoked at the beginning of each individual test method.
+    onTestSuccess(ITestResult result): Invoked when a test method successfully completes.
 
-onTestFailure(ITestResult result): Invoked when a test method fails.
+    onTestFailure(ITestResult result): Invoked when a test method fails.
 
-onTestSkipped(ITestResult result): Invoked when a test method is skipped.
-onTestFailedButWithinSuccessPercentage(ITestResult result): Invoked when a test method fails but is still considered successful based on a defined success percentage.
+    onTestSkipped(ITestResult result): Invoked when a test method is skipped.
+    onTestFailedButWithinSuccessPercentage(ITestResult result): Invoked when a test method fails but is still considered successful based on a defined success percentage.
 
-Implementation: To use ITestListener, a class must implement the ITestListener interface and override the desired methods. This listener class can then be registered with TestNG, either through the testng.xml file or by using the @Listeners annotation on the test class.
+    Implementation: To use ITestListener, a class must implement the ITestListener interface and override the desired methods. This listener class can then be registered with TestNG, either through the testng.xml file or by using the @Listeners annotation on the test class.
 
 -------------------------------------------------------------------------------------------------------------------
 
 Extent Reports ( 3rd party library) not part of testng
 ----------------------------------------------------------
-Extent Reports is a popular reporting library used in conjunction with TestNG and other testing frameworks to generate detailed and visually appealing test execution reports.
-It provides a way to document the results of automated tests,
-making it easier to analyze and share test outcomes with stakeholders.
+    Extent Reports is a popular reporting library used in conjunction with TestNG and other testing frameworks to generate detailed and visually appealing test execution reports.
+    It provides a way to document the results of automated tests,
+    making it easier to analyze and share test outcomes with stakeholders.
 
 Key Features of Extent Reports: (3 main class)
 ---------------------------
-ExtentSparkReporter:  UI
-ExtentReports:  populate common info (tester name , OS , browser name)
-ExtentTest:
+    ExtentSparkReporter:  UI
+    ExtentReports:  populate common info (tester name , OS , browser name)
+    ExtentTest:
 
