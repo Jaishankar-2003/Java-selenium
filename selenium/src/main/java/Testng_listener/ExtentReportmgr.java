@@ -19,7 +19,7 @@ public class ExtentReportmgr implements ITestListener
 
     public void onStart (ITestContext context)
     {
-        sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/testdata/extend report/report1.html");
+        sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/src/main/testdata/extend_report/report1.html");
 
         sparkReporter.config().setDocumentTitle("Automation report");
         sparkReporter.config().setReportName("Function test");
