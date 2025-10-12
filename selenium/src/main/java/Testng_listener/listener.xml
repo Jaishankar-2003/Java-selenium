@@ -3,7 +3,7 @@
 <suite name="Suite">
 
     <listeners>
-        <listener class-name="Testng_listener.MyListener"/>
+        <listener class-name="Testng_listener.ExtentReportmgr"/>
     </listeners>
 
     <test thread-count="5" name="Test">
@@ -12,3 +12,6 @@
         </classes>
     </test>
 </suite>
+
+
+

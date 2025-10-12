@@ -3,6 +3,11 @@ TEST NG ------> Test New Generation
 
 java based unit test tool
 
+1 Annotation
+2 Assertion  [hard assert , soft assert]
+3 Dependency method [ @Test(priority = 2 , dependsOnMethods = {"openapp"}) ]
+4 group
+
 Adv
 -----
     1 Test Cases & test suites
@@ -194,6 +199,7 @@ Dependency Methods
 
     dependsOnMethods={"methods1","methods2"}
 
+----------------------------------------------------------------------------------
 grouping
 ----------
     grouping should be execute only by xml files
