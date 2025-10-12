@@ -3,7 +3,6 @@ package Testng_listener;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.Test;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestContext;
@@ -19,7 +18,9 @@ public class ExtentReportmgr implements ITestListener
 
     public void onStart (ITestContext context)
     {
-        sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/src/main/testdata/extend_report/report1.html");
+        String path = System.getProperty("user.dir") + "report1.html";
+
+        sparkReporter = new ExtentSparkReporter(path);
 
         sparkReporter.config().setDocumentTitle("Automation report");
         sparkReporter.config().setReportName("Function test");
@@ -39,7 +40,6 @@ public class ExtentReportmgr implements ITestListener
     {
         test = extent.createTest(result.getName());
         test.log(Status.PASS,"Test case PASSED is :" + result.getName());
-        test.log(Status.FAIL,"Test case FAILED cause :" + result.getThrowable());
     }
 
     public void onTestFailure(ITestResult result)
@@ -55,7 +55,7 @@ public class ExtentReportmgr implements ITestListener
         test.log(Status.SKIP,"Test case Skipped is :" + result.getName());
     }
 
-    public void onFinish(ITestResult result)
+    public void onFinish(ITestContext context)
     {
         extent.flush();
     }

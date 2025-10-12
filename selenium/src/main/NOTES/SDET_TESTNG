@@ -353,3 +353,17 @@ Key Features of Extent Reports: (3 main class)
     ExtentReports:  populate common info (tester name , OS , browser name)
     ExtentTest:
 
+==========================================================================================================================
+
+page object model (pom)
+-------------------------
+
+pom is not framework it is design pattern
+
+pattern maintain  -->{ locator , test method , test case } ------->  maintain in  separate class
+
+with out use  pom
+------------
+
+1 duplicate of element & locator
+2 upadtion
