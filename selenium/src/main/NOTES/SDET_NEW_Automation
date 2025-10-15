@@ -1,0 +1,37 @@
+
+we organize automation project files/folders in structured or organized manner.
+
+objective
+==========
+1 reusability
+2 maintainability
+3 readability
+
+bulid-in -framework
+        ex - testng , junit , cucumber Bdd , robot etc
+
+customized (user defined) -framework
+            modular frame , data driven , keyword driven , hybrid driven etc
+
+phase
+======
+
+1 . Analysing Aut (understand the application)
+        - Number of pages
+        - What are all elements / how / type
+        - what to automate & what not to be automate
+
+2 . choose Test case for automation
+
+        1 . 10 Test case  ----- 90 automatable  10 cannot automatable  ( 100% possible in these context )
+        2 . sanity/smoke - p1
+        3 . data driven test  - p2
+        4 . regression -p2
+        5 . any other cases - p4
+
+3 Design & Development of framework
+
+4 Execution - local [ide] , remotely [git] , jenkin
+
+5 Maintenance
+
