@@ -369,3 +369,12 @@ with out use  pom
 2 upadtion
 
 ==============================================================================================================
+
+lOGGING  - Record The events in the form of text     common - track the information , for security purpose
+
+application log -  backend log
+automation log -  track failed cases , track defect reproduce , log easy to understand dev can fix it easily
+
+
+Appenders - Where to generate logs (Console/File)
+Loggers - All < Trace < Debug < Info < Warn < Error < Fatal < off

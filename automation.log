@@ -1,0 +1,4 @@
+23:27:56.740 [main] INFO  logtest - ✅ INFO log
+23:27:56.749 [main] WARN  logtest - ⚠ WARN log
+23:27:56.749 [main] ERROR logtest - ❌ ERROR log
+23:27:56.750 [main] FATAL logtest - 💀 FATAL log

@@ -1,0 +1,12 @@
+23:31:03.628 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001
+23:31:03.718 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+23:31:23.845 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+23:31:24.276 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+23:31:30.339 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+23:31:32.340 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+23:41:18.796 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+23:41:18.820 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+23:41:28.586 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+23:41:28.694 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+23:41:30.925 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+23:41:32.926 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
