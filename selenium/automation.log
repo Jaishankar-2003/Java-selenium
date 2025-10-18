@@ -10,3 +10,41 @@
 23:41:28.694 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
 23:41:30.925 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
 23:41:32.926 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+00:35:11.634 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+00:35:11.658 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+00:35:26.587 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+00:35:26.693 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+00:35:28.774 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+00:35:30.775 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+00:39:30.150 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+00:39:30.178 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+00:40:12.924 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+00:40:13.040 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+00:40:15.042 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+00:40:17.043 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+00:47:48.241 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+00:47:48.264 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+00:48:00.728 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+00:48:00.826 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+00:48:02.581 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+00:48:04.581 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+00:50:10.365 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+00:50:10.393 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+00:50:24.592 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+00:50:24.756 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+00:50:27.321 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+00:50:29.322 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+01:11:31.221 [main] TRACE FRAMEWORK.TEST.testcase.Test001_login - Logger initialized at TRACE level
+01:11:36.214 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+01:11:36.246 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+01:11:49.773 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+01:11:49.943 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+01:11:52.501 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+01:11:54.502 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+01:33:43.310 [main] TRACE FRAMEWORK.TEST.testcase.Test001_login - Logger initialized at TRACE level
+01:33:50.168 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+01:33:50.192 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+01:34:01.379 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+01:34:01.579 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+01:34:04.354 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+01:34:06.355 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******

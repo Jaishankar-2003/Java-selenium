@@ -2,3 +2,15 @@
 23:27:56.749 [main] WARN  logtest - ⚠ WARN log
 23:27:56.749 [main] ERROR logtest - ❌ ERROR log
 23:27:56.750 [main] FATAL logtest - 💀 FATAL log
+00:48:15.604 [main] TRACE logtest - TRACE log
+00:48:15.610 [main] DEBUG logtest - DEBUG log
+00:48:15.611 [main] INFO  logtest - ✅ INFO log
+00:48:15.613 [main] WARN  logtest - ⚠ WARN log
+00:48:15.613 [main] ERROR logtest - ❌ ERROR log
+00:48:15.613 [main] FATAL logtest - 💀 FATAL log
+00:49:55.141 [main] TRACE logtest - TRACE log
+00:49:55.145 [main] DEBUG logtest - DEBUG log
+00:49:55.145 [main] INFO  logtest - ✅ INFO log
+00:49:55.146 [main] WARN  logtest - ⚠ WARN log
+00:49:55.146 [main] ERROR logtest - ❌ ERROR log
+00:49:55.147 [main] FATAL logtest - 💀 FATAL log

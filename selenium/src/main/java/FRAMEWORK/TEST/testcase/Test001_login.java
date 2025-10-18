@@ -63,7 +63,8 @@ public class Test001_login extends Baseclass
 
             Thread.sleep(2000);
 
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             logger.error("Test failed...");
             logger.debug("Debug logs...");
