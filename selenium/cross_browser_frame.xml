@@ -1,4 +1,4 @@
-<suite name="suite" Thread-count = "5" >
+<suite name="suite" Thread-count = "5"  parallel = "">
     <test  name="chrome Test">
         <parameter name ="os" value = "Window"/>
         <parameter name ="browser" value = "Chrome"/>
