@@ -1,0 +1,10 @@
+<suite name="suite">
+    <test Thread-count = "5" name="Test">
+        <parameter name ="os" value = "Window"/>
+        <parameter name ="browser" value = "Chrome"/>
+
+        <classes>
+            <class name="FRAMEWORK.TEST.testcase.Test001_login"/>
+        </classes>
+    </test>
+</suite>
