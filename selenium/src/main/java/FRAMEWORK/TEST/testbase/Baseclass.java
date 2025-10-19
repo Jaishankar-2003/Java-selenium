@@ -11,7 +11,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 //import java.util.logging.LogManager;
 //import java.util.logging.Logger;
 
@@ -33,6 +38,8 @@ public class Baseclass
     // Log4j
     public Logger logger;
 
+    public Properties p;
+
     @BeforeClass
     @Parameters({"os","browser"})
     public void setup(String os , String br)
@@ -41,11 +48,15 @@ public class Baseclass
         logger = LogManager.getLogger(this.getClass());
         logger.trace("Logger initialized at TRACE level");
 
+        // Loading config.properties file
+//        FileReader file = new FileReader(".//src//test//resources//config.properties");
+//        p = new Properties();
+//        p.load(file);
 
 
 
         // Create raw ChromeDriver
-        ChromeDriver rawDriver = new ChromeDriver();
+       ChromeDriver rawDriver = new ChromeDriver();
 
         // Create custom listener for logging intermediate steps
         WebDriverListener listener = new WebDriverListener() {

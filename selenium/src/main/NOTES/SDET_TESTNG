@@ -386,3 +386,6 @@ Thread count - Seperate location should be create for the each test cases ,
                use xml in project level only
 
 
+property file  -   one common file to read the test case use full in url reading
+
+
