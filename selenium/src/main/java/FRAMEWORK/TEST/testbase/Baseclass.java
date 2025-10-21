@@ -1,7 +1,6 @@
 package FRAMEWORK.TEST.testbase;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,10 +10,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 //import java.util.logging.LogManager;

@@ -40,10 +40,4 @@ public class homepage extends Basepage
         login_pass.click();
     }
 
-
-
-
-
-
-
 }
