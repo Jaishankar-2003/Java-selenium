@@ -80,3 +80,12 @@
 12:46:58.454 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
 12:47:01.130 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
 12:47:03.130 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******
+19:02:42.982 [main] TRACE FRAMEWORK.TEST.testcase.Test001_login - Logger initialized at TRACE level
+22:09:52.377 [main] TRACE FRAMEWORK.TEST.testcase.Test001_login - Logger initialized at TRACE level
+22:10:42.020 [main] TRACE FRAMEWORK.TEST.testcase.Test001_login - Logger initialized at TRACE level
+22:10:57.385 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ***Starting T.c 001***
+22:10:57.410 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - LOGO DISPLAYED
+22:11:19.006 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - CLICK LOGIN BUTTON
+22:11:19.153 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - FILL ALL THE DETAILS
+22:11:22.366 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - ACT  CREATE SUCCESSFULLY
+22:11:24.367 [main] INFO  FRAMEWORK.TEST.testcase.Test001_login - *******  finish  Tc 001 *******

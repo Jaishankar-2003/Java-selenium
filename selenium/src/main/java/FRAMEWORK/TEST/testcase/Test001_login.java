@@ -16,7 +16,7 @@ import java.time.Duration;
 public class Test001_login extends Baseclass
 {
 
-    @Test
+    @Test(groups = "regression")
     public void Account_register() throws InterruptedException
     {
         logger.info("***Starting T.c 001***");

@@ -35,7 +35,7 @@ public class Baseclass
 
     public Properties p;
 
-    @BeforeClass
+    @BeforeClass(groups = {"regression"})
     @Parameters({"os","browser"})
     public void setup(String os , String br)
     {
@@ -111,7 +111,7 @@ public class Baseclass
         driver.manage().window().maximize();
     }
 
-    @AfterClass
+    @AfterClass(groups = { "regression"})
     public void terminate()
     {
         driver.quit();
