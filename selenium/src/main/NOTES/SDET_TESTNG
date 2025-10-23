@@ -366,7 +366,7 @@ with out use  pom
 ------------
 
 1 duplicate of element & locator
-2 upadtion
+2 updation
 
 ==============================================================================================================
 
@@ -376,10 +376,10 @@ application log -  backend log
 automation log -  track failed cases , track defect reproduce , log easy to understand dev can fix it easily
 
 
-Appenders - Where to generate logs (Console/File)
+Appends - Where to generate logs (Console/File)
 Loggers - All < Trace < Debug < Info < Warn < Error < Fatal < off
 
-Thread count - Seperate location should be create for the each test cases ,
+Thread count - Separate location should be create for the each test cases ,
                it help full for parallel execution 5 is maximum more then these
                more memory should create
 
@@ -389,5 +389,80 @@ Thread count - Seperate location should be create for the each test cases ,
 property file  -   one common file to read the test case use full in url reading
 
 Data driven test --
+
+
+============================================================================================================
+    Cucumber
+    ===================
+
+   Pre-defined frameworks
+   	JUNit (TDD --> Test Driven Framework)
+   	TestNG (TDD --> Test Driven Framework)
+   	Cucumber (BDD -->Behavior Driven Framework)
+
+   	TDD
+   	    Test scenario ---> Test script ----> TestNG ---> Report
+
+   	BDD
+   	    Test Scenario ---> Feature File ---> Step Definition ---> Test Runner
+                                                 java+sel
+
+
+
+   User defined frameworks
+   ============================
+
+   	Data Driven Framework
+   	Keyword Driven framework
+   	Hybrid Driven framework
+
+   Install Cucumber plug-in for Eclipse
+   ------------------------
+   Eclipse Market Place -->Search for cucumber -->Install
+
+   Feature File
+   -----------
+   Feature file contains all the features of an application,
+
+   Application: e-banking
+   	Features:
+   		login --> Steps
+   		add customer -->Steps
+   		Edit customer --> Steps
+
+---------------------------------------------------------------------------------------
+
+    Feature file scenario
+    -------------------
+
+    Feature : MyAccount.Login Feature
+        Description : This feature will test a login functionality
+
+    # Simple login without parameters
+    Scenario: Login with valid user name and password
+    Given open browser
+    when Enter the url "url"
+    And click on my account menu
+    And Enter registered username and password
+    And Enter on login button
+    Then user must Successfully login to the web page
+
+
+    Gherkins language --Special language
+    --------------------
+    Feature
+    Scenario
+    given
+    When
+    And
+    Then
+
+    Given
+        pre-requisites
+    When/And
+        Steps
+    Then
+        Expected
+
 
 
