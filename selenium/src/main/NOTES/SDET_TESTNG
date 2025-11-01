@@ -495,20 +495,20 @@ Data driven test --
  features : the path of the feature files
  glues : the path of the step definition files.
  format :  to generate different types of reporting
-
  monochrome :  display the console output in a proper readable format
-
  strict:  it will check if any step is not defined in step definition file
-
  dryRun : to check the mapping is proper between feature file and step def file
 
     
-
-
-
-
-
-
+Simple login with Data table params
+Scenario: Log-in with valid username and password
+Given Open the browser
+When Enter the URL "http://practice.automationtesting.in/"
+And Click on My Account Menu
+And Enter registered username and password
+pavanoltraining Testäseniim123
+And click on lagin button
+Then User must successfully login to the web page
 
 check
 _______
