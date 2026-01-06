@@ -450,17 +450,11 @@ Data driven test --
 
 
     Scenario Outline: Log-in with valid username and password
-
     Given Open the browser
-
     When Enter the URL http://practice.automationtesting.in/
-
     And Click on My Account Menu
-
     And Enter registered username "<username>" and password "<password>"
-
     And Click on login button
-
     Then Very login
 
    Examples:
@@ -499,21 +493,52 @@ Data driven test --
  strict:  it will check if any step is not defined in step definition file
  dryRun : to check the mapping is proper between feature file and step def file
 
-    
+m-2 :
+--------
+
 Simple login with Data table params
 Scenario: Log-in with valid username and password
 Given Open the browser
 When Enter the URL "http://practice.automationtesting.in/"
 And Click on My Account Menu
 And Enter registered username and password
-pavanoltraining Testäseniim123
-And click on lagin button
+|pavanoltraining | Testäseniim123 |
+And click on login button
 Then User must successfully login to the web page
 
-check
-_______
 
-report check:
+m-3 :
+--------
+
+Simple login with Data table params
+Scenario: Log-in with valid username and password
+Given Open the browser
+When Enter the URL "http://practice.automationtesting.in/"
+And Click on My Account Menu
+And Enter registered username and password
+|   username     |    password    |
+|pavanoltraining | Testäseniim123 |
+|pavanoltraining | Testäseniim456 |
+|pavanoltraining | Testäseniim789 |
+And click on login button
+Then User must successfully login to the web page
+
+Data driven test Bdd :
+--------------------------
+
+m-1 : Scenario outline and example
+m-2 : Data table with single input (with Header , without header(map))
+m-3 : Data table with multiple input
+
+Tags & cucumber :
+
+Tags : ( like Groups )
+ by using tagging feature we can execute / ignore specific test scenario from a feature file
+                                ---------------------------------------------------------------
+
+hooks : (like annotation)
+
+
 
 
 
