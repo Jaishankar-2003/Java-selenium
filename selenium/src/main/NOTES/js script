@@ -1,0 +1,161 @@
+Below is a clean, QA-friendly list of commonly used JavascriptExecutor.executeScript() commands in Selenium, including scrolling, clicking, input, highlighting, and page info.
+
+
+🔹 Basic Syntax
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("javascript_code", arguments);
+
+
+📜 Scrolling Scripts (MOST USED)
+
+
+Scroll element into view
+
+js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+
+Scroll to bottom of page
+
+js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+
+
+Scroll to top of page
+
+js.executeScript("window.scrollTo(0, 0);");
+
+
+Scroll by pixels
+
+js.executeScript("window.scrollBy(0, 500);");
+
+
+Smooth scroll
+
+js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth'});", element);
+
+
+🖱 Click & Input Scripts
+
+
+Click element (when normal click fails)
+
+js.executeScript("arguments[0].click();", element);
+
+
+Set value in input field
+
+js.executeScript("arguments[0].value='test value';", element);
+
+
+Clear input field
+
+js.executeScript("arguments[0].value='';", element);
+
+
+✨ Element Styling / Highlighting (DEBUGGING)
+
+
+Highlight element
+
+js.executeScript(
+  "arguments[0].style.border='3px solid red';", element
+);
+
+
+Change background color
+
+js.executeScript(
+  "arguments[0].style.background='yellow';", element
+);
+
+
+📏 Page & Element Info
+
+
+Get page title
+
+String title = (String) js.executeScript("return document.title;");
+
+
+Get current URL
+
+String url = (String) js.executeScript("return window.location.href;");
+
+
+Get element text
+
+String text = (String) js.executeScript("return arguments[0].innerText;", element);
+
+
+Get attribute
+
+String cls = (String) js.executeScript("return arguments[0].getAttribute('class');", element);
+
+
+⏱ Page Load & Ready State
+
+
+Check page load complete
+
+String state = (String) js.executeScript("return document.readyState;");
+
+
+Expected:
+
+complete
+
+
+🚫 Disable / Enable Elements
+
+
+Disable element
+
+js.executeScript("arguments[0].setAttribute('disabled','true');", element);
+
+
+Enable element
+
+js.executeScript("arguments[0].removeAttribute('disabled');", element);
+
+
+🧹 Remove Element (for testing)
+
+js.executeScript("arguments[0].remove();", element);
+
+
+🪟 Browser & Alert
+
+
+Refresh page
+
+js.executeScript("location.reload();");
+
+
+Trigger alert
+
+js.executeScript("alert('Test Alert');");
+
+
+🧪 Scroll inside div (VERY USEFUL)
+
+js.executeScript(
+  "arguments[0].scrollTop = arguments[0].scrollHeight;", element
+);
+
+
+🗣 Interview One-Liner
+
+
+JavascriptExecutor is used in Selenium to perform actions like scrolling, clicking, and interacting with hidden or non-responsive elements when standard WebDriver methods fail.
+
+If you want, I can also provide:
+
+
+Reusable utility class
+
+
+Real interview questions
+
+
+When NOT to use JavaScriptExecutor
